@@ -1,0 +1,31 @@
+<!-- In res/color/my_date_text_color.xml -->
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:state_checked="true"
+        android:color="@color/white"
+        />
+
+    <item
+        android:state_pressed="true"
+        android:color="@color/white"
+        />
+
+    <item
+        android:state_activated="true"
+        android:color="@color/white"
+        />
+
+    <item
+        android:state_enabled="false"
+        android:color="#808080"
+        />
+
+    <item
+        android:state_enabled="false"
+        android:color="#808080"
+        />
+
+    <item android:color="@color/black" />
+
+</selector>

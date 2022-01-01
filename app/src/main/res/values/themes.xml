@@ -1,0 +1,56 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Theme.KTHalabook" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Primary brand color. -->
+        <item name="colorPrimary">@color/primary_color</item>
+        <item name="colorPrimaryDark">@color/primary_color</item>
+        <item name="colorAccent">@color/teal_200</item>
+        <item name="android:fontFamily">@font/poppins</item>
+        <item name="fontFamily">@font/poppins</item> <!-- target android sdk versions < 26 and > 14 if theme other than AppCompat -->
+
+    </style>
+
+    <style name="BottomNavigationTheme" parent="Theme.AppCompat.Light">
+        <item name="colorPrimary">@color/secondry_color</item>
+        <item name="android:textColorSecondary">@color/gray</item>
+    </style>
+
+    <style name="dm_sans_bold" parent="Theme.AppCompat.Light">
+        <item name="android:fontFamily">@font/dm_sans_bold</item>
+        <item name="fontFamily">@font/dm_sans_bold</item> <!-- target android sdk versions < 26 and > 14 if theme other than AppCompat -->
+
+    </style>
+
+    <style name="sk_modernist_regular" parent="Theme.AppCompat.Light">
+        <item name="android:fontFamily">@font/sk_modernist_regular</item>
+        <item name="fontFamily">@font/sk_modernist_regular</item> <!-- target android sdk versions < 26 and > 14 if theme other than AppCompat -->
+
+    </style>
+
+    <style name="sf_pro_text" parent="Theme.AppCompat.Light">
+        <item name="android:fontFamily">@font/sf_pro_text</item>
+        <item name="fontFamily">@font/sf_pro_text</item> <!-- target android sdk versions < 26 and > 14 if theme other than AppCompat -->
+
+    </style>
+
+    <style name="HeaderViewCustomText" parent="TextAppearance.MaterialCalendarWidget.Date">
+        <item name="android:textColor">@android:color/transparent</item>
+        <item name="android:fontFamily">@font/sk_modernist_bolds</item>
+        <item name="android:textSize">@dimen/_12sdp</item>
+    </style>
+
+    <style name="CalenderViewDayCustomText" parent="TextAppearance.MaterialCalendarWidget.Date">
+        <item name="android:fontFamily">@font/sk_modernist_regular</item>
+        <item name="android:textSize">@dimen/_11sdp</item>
+        <item name="android:textColor">@color/my_date_text_color</item>
+        <item name="android:layout_margin">@dimen/_5sdp</item>
+    </style>
+
+    <style name="CalenderViewWeekCustomText" parent="TextAppearance.MaterialCalendarWidget.Date">
+        <item name="android:textColor">@color/black_500</item>
+        <item name="android:fontFamily">@font/sk_modernist_regular</item>
+        <item name="android:textSize">@dimen/_9sdp</item>
+        <item name="alpha">0.7</item>
+    </style>
+
+</resources>

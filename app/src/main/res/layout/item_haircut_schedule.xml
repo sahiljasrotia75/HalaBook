@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:tools="http://schemas.android.com/tools"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <data>
+        <variable
+            name="position"
+            type="Integer" />
+        <variable
+            name="listener"
+            type="com.aps.kthalabook.adapter.MyScheduleAdapter.ScheduleSelectionListener" />
+        <variable
+            name="item"
+            type="com.aps.kthalabook.model.ScheduleModelItem" />
+    </data>
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/_14sdp"
+        android:layout_marginVertical="@dimen/_4sdp"
+        android:paddingHorizontal="@dimen/_10sdp"
+        android:paddingVertical="@dimen/_4sdp"
+
+        nearbySelection="@{item}"
+        selectionText="@{tvSelection}"
+        android:onClick="@{()->listener.onSelection(item,position)}"
+        android:background="@drawable/item_schedule_unselection_bg">
+
+
+        <TextView
+            android:id="@+id/tvSelection"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/sk_modernist_regular"
+            android:text="@{item.text}"
+            android:textColor="@color/black_500"
+            android:textSize="@dimen/_10sdp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="16:00" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

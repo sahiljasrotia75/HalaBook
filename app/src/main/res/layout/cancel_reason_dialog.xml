@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:background="@drawable/round_corners_mask"
+    android:padding="@dimen/_10sdp"
+    >
+
+
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/_10sdp"
+        android:orientation="vertical"
+        >
+        <TextView
+            android:id="@+id/txt_dec"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Reason for your cancellation"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:textSize="@dimen/_19ssp"
+            android:textColor="@color/black"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:textStyle="bold"
+
+
+            />
+
+        <RadioGroup
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginTop="@dimen/_10sdp"
+
+            android:layout_gravity="center|start"
+            >
+
+            <RadioButton
+                android:id="@+id/monthlyRb"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="I want to book another salon"
+                android:layout_weight="1" />
+
+            <RadioButton
+                android:id="@+id/weeklyRadioBtn"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="I have booked mistakenly" />
+
+            <RadioButton
+                android:id="@+id/weeklyRadioBtns"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="Saloon asked me to cancel" />
+            <RadioButton
+                android:id="@+id/weeklyRadioBtnsother"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="other" />
+
+
+
+
+        </RadioGroup>
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_40sdp"
+            android:hint="Write here the reason"
+            android:textSize="@dimen/_12ssp"
+            android:textColor="@color/black"
+            android:layout_gravity="center|start"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:background="@drawable/et_bg"
+            android:paddingStart="@dimen/_5sdp"
+            />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginTop="@dimen/_20sdp"
+            android:layout_marginStart="@dimen/_10sdp"
+            android:layout_marginEnd="@dimen/_10sdp"
+
+
+            >
+
+
+            <Button
+                android:id="@+id/btn_yes"
+                android:layout_width="match_parent"
+                android:layout_weight="1"
+                android:layout_height="@dimen/_30sdp"
+                android:background="@drawable/btn_bg"
+                android:text="Submit"
+                android:textSize="@dimen/_13ssp"
+                android:textColor="@color/white"
+
+                />
+            <Button
+                android:id="@+id/btn_no"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_30sdp"
+                android:background="@drawable/secondry_btn_bg"
+                android:text="Skip"
+                android:textSize="@dimen/_13ssp"
+                android:textColor="@color/black"
+                android:backgroundTint="@color/white"
+                android:layout_marginTop="@dimen/_5sdp"
+
+                />
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+
+</LinearLayout>

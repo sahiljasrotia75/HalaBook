@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="@dimen/_5sdp"
+    android:elevation="@dimen/_5sdp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:padding="@dimen/_5sdp"
+        >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:layout_marginTop="@dimen/_10sdp"
+            >
+
+
+
+            <TextView
+                android:layout_width="0sp"
+                android:layout_weight="3"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center|start|top"
+                android:gravity="center|start|top"
+                android:text="This is title of notification"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_12ssp"
+                android:textStyle="bold"
+
+                />
+
+            <TextView
+                android:layout_width="0sp"
+                android:layout_weight="2"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center|end|top"
+                android:gravity="end|center"
+                android:text="2 days to ago"
+                android:layout_marginStart="@dimen/_5sdp"
+                android:textColor="@color/black_500"
+                android:textSize="@dimen/_11ssp"
+
+                />
+
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center|start"
+            android:gravity="center|start"
+            android:text="This method is used to get the position of the current selected tab. This method returns an int type value for the position of the selected tab. It returns -1 if there isn’t a selected tab"
+            android:textColor="@color/gray"
+            android:textSize="@dimen/_11ssp"
+            android:textStyle="bold"
+
+            />
+
+    </LinearLayout>
+
+</androidx.cardview.widget.CardView>

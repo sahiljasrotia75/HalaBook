@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:background="@drawable/round_corners_mask"
+    android:padding="@dimen/_10sdp"
+    >
+
+
+
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Rate your last service at "
+        android:layout_marginTop="@dimen/_10sdp"
+        android:textSize="@dimen/_16ssp"
+        android:textColor="@color/black"
+        android:layout_gravity="center"
+        android:textStyle="bold"
+        android:layout_marginStart="@dimen/_10sdp"
+        android:layout_marginEnd="@dimen/_10sdp"
+
+        />
+<TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Suspendisse Hairdresser"
+        android:textSize="@dimen/_11ssp"
+        android:textColor="@color/primary_color"
+        android:layout_gravity="center"
+        android:textStyle="bold"
+        android:layout_marginStart="@dimen/_10sdp"
+        android:layout_marginEnd="@dimen/_10sdp"
+
+        />
+
+
+    <RatingBar
+        android:id="@+id/rating_bar"
+        style="?android:attr/ratingBarStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:max="5"
+        android:numStars="5"
+        android:rating="4.0"
+        android:stepSize="0.0"
+        android:layout_gravity="center"
+
+        />
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Write Your Comment here"
+        android:textSize="@dimen/_12ssp"
+        android:textColor="@color/black"
+        android:layout_gravity="center|start"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:paddingStart="@dimen/_5sdp"
+        />
+
+
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_30sdp"
+        android:hint="Write here"
+        android:textSize="@dimen/_12ssp"
+        android:textColor="@color/black"
+        android:inputType="textEmailAddress"
+        android:layout_gravity="center|start"
+        android:layout_marginTop="@dimen/_5sdp"
+        android:background="@drawable/et_bg"
+        android:paddingStart="@dimen/_5sdp"
+        />
+
+
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="@dimen/_20sdp"
+        android:layout_marginStart="@dimen/_10sdp"
+        android:layout_marginEnd="@dimen/_10sdp"
+
+
+        >
+
+
+        <Button
+            android:id="@+id/btn_submit"
+            android:layout_width="0sp"
+            android:layout_weight="1"
+            android:layout_height="@dimen/_30sdp"
+            android:background="@drawable/btn_bg"
+            android:text="Submit"
+            android:textSize="@dimen/_13ssp"
+            android:textColor="@color/white"
+
+
+            />
+
+    </LinearLayout>
+
+</LinearLayout>

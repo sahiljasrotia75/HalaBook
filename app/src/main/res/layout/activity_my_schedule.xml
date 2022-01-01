@@ -1,0 +1,212 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <variable
+            name="listener"
+            type="com.aps.kthalabook.activity.MyScheduleListener" />
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:orientation="vertical"
+        android:layout_height="match_parent"
+        android:background="@color/primary_color"
+        tools:context=".activity.MyScheduleActivity">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/_10sdp">
+
+            <ImageView
+                android:id="@+id/iv_menu"
+                android:layout_width="@dimen/_30sdp"
+                android:layout_height="@dimen/_30sdp"
+                android:padding="@dimen/_5sdp"
+                android:src="@drawable/ic_back" />
+
+
+            <ImageView
+                android:layout_width="@dimen/_30sdp"
+                android:layout_height="@dimen/_30sdp"
+                android:layout_alignParentEnd="true"
+                android:padding="@dimen/_5sdp"
+                android:src="@drawable/ic_three_dot"
+
+                />
+
+
+        </RelativeLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:background="@drawable/top_round_drawable"
+            android:padding="@dimen/_14sdp"
+            android:layout_marginTop="@dimen/_20sdp">
+
+            <androidx.core.widget.NestedScrollView
+                android:id="@+id/nestedScrollMySchedule"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:animateLayoutChanges="true">
+
+                    <RelativeLayout
+                        android:id="@+id/calendarLayout"
+                        android:layout_width="match_parent"
+                        android:background="@color/transparent"
+                        android:layout_height="wrap_content"
+                        android:animateLayoutChanges="true">
+
+                        <com.prolificinteractive.materialcalendarview.MaterialCalendarView
+                            android:id="@+id/calendarViewMySchedule"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            app:mcv_showOtherDates="decorated_disabled"
+                            android:animateLayoutChanges="true"
+                            app:mcv_headerTextAppearance="@style/HeaderViewCustomText"
+                            app:mcv_selectionMode="single"
+                            android:padding="8dp"
+                            app:mcv_selectionColor="@color/white"
+                            app:mcv_tileHeight="@dimen/_35sdp"
+                            app:mcv_tileWidth="@dimen/_42sdp"
+                            app:mcv_leftArrow="@android:color/transparent"
+                            app:mcv_rightArrow="@android:color/transparent"
+                            app:mcv_dateTextAppearance="@style/CalenderViewDayCustomText"
+                            app:mcv_weekDayTextAppearance="@style/CalenderViewWeekCustomText"
+                            app:mcv_firstDayOfWeek="monday"
+                            android:layout_marginStart="5dp"
+                            android:layout_marginEnd="5dp" />
+
+                        <androidx.constraintlayout.widget.ConstraintLayout
+                            android:id="@+id/calendarHeader"
+                            android:layout_width="match_parent"
+                            android:layout_height="?actionBarSize"
+                            android:background="@color/transparent"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:id="@+id/exMonthYearText"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/sk_modernist_bolds"
+                                android:onClick="@{()->listener.updateCalendarMode()}"
+                                android:padding="@dimen/_5sdp"
+                                android:textColor="@color/black_500"
+                                android:textSize="@dimen/_12sdp"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toTopOf="parent"
+                                tools:text="April 30, 2021" />
+
+                            <ImageView
+                                android:id="@+id/gotoPrevious"
+                                android:layout_width="@dimen/_26sdp"
+                                android:layout_height="@dimen/_26sdp"
+                                android:layout_marginHorizontal="@dimen/_24sdp"
+                                android:onClick="@{()->listener.goToPrevious()}"
+                                android:padding="@dimen/_7sdp"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toTopOf="parent"
+                                app:srcCompat="@drawable/ic_left_arrow" />
+
+                            <ImageView
+                                android:id="@+id/gotoNext"
+                                android:layout_width="@dimen/_26sdp"
+                                android:layout_height="@dimen/_26sdp"
+                                android:layout_marginHorizontal="@dimen/_24sdp"
+                                android:onClick="@{()->listener.goToNext()}"
+                                android:padding="@dimen/_7sdp"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintTop_toTopOf="parent"
+                                app:srcCompat="@drawable/ic_right_icon" />
+
+                        </androidx.constraintlayout.widget.ConstraintLayout>
+
+                        <View
+                            android:layout_below="@+id/calendarHeader"
+                            android:layout_width="match_parent"
+                            android:layout_height="0.5dp" />
+
+                    </RelativeLayout>
+
+                    <TextView
+                        android:id="@+id/txtHaircutTime"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/sk_modernist_bolds"
+                        android:textColor="@color/black_500"
+                        android:textSize="@dimen/_12sdp"
+                        android:gravity="center"
+                        android:text="Hair Cut Time"
+                        android:layout_gravity="center"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/rv_my_schedules"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal|center_vertical"
+                        android:layout_marginTop="@dimen/_5sdp"
+                        tools:listitem="@layout/item_haircut_schedule"
+                        app:layoutManager="androidx.recyclerview.widget.GridLayoutManager" />
+
+                    <ProgressBar
+                        android:id="@+id/progressBar"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="6dp"
+                        android:indeterminateTint="@color/primary_color"
+                        android:indeterminateTintMode="src_in"
+                        android:visibility="gone" />
+
+                    <TextView
+                        android:id="@+id/error_msg_txt"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/no_schedule_for_selected_date"
+                        android:textAlignment="center"
+                        android:visibility="gone"
+                        android:drawablePadding="@dimen/_7sdp"
+                        android:layout_marginTop="@dimen/_60sdp"
+                        android:gravity="center"
+                        android:fontFamily="@font/sk_modernist_regular"
+                        android:textColor="@color/gray"
+                        android:textSize="@dimen/_13sdp" />
+
+                    <Button
+                        android:id="@+id/btn_login"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_40sdp"
+                        android:layout_marginTop="@dimen/_20sdp"
+                        android:background="@drawable/btn_bg"
+                        android:textAllCaps="false"
+                        android:text="Select Specialist"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/_13ssp"
+
+                        />
+
+                </LinearLayout>
+            </androidx.core.widget.NestedScrollView>
+
+
+        </LinearLayout>
+    </LinearLayout>
+</layout>

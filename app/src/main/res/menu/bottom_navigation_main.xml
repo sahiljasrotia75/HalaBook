@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:id="@+id/nav_dash"
+        android:enabled="true"
+        android:icon="@drawable/dashboard_notselected"
+        android:title="Dashboard"
+        app:showAsAction="ifRoom" />
+    <item
+        android:id="@+id/nav_location"
+        android:enabled="true"
+        android:icon="@drawable/location_notselected"
+        android:title="Location"
+        app:showAsAction="ifRoom" />
+    <item
+        android:id="@+id/nav_booking"
+        android:enabled="true"
+        android:icon="@drawable/list_notselected"
+        android:title="List"
+        app:showAsAction="ifRoom" />
+    <item
+        android:id="@+id/nav_notification"
+        android:enabled="true"
+        android:icon="@drawable/notification_notselected"
+        android:title="Notification"
+        app:showAsAction="ifRoom" />
+
+</menu>
