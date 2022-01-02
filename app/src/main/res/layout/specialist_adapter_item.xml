@@ -57,9 +57,9 @@
                 android:layout_gravity="center"
                 android:gravity="center"
                 android:text="Elon Gated"
-                android:textColor="@color/black_500"
-                android:textSize="@dimen/_11ssp"
-                android:textStyle="bold" />
+                android:fontFamily="@font/sk_modernist_regular"
+                android:textColor="@color/text_color_menu"
+                android:textSize="@dimen/_11ssp" />
 
 
             <TextView
@@ -68,8 +68,9 @@
                 android:layout_gravity="center"
                 android:drawablePadding="@dimen/_5sdp"
                 android:gravity="center"
+                android:fontFamily="@font/sk_modernist_regular"
+                android:textColor="@color/text_color_menu"
                 android:text="Hair Specialist"
-                android:textColor="@color/gray"
                 android:textSize="@dimen/_10ssp" />
 
         </LinearLayout>

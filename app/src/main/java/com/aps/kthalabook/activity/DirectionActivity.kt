@@ -1,7 +1,6 @@
 package com.aps.kthalabook.activities
 
 import android.app.Dialog
-import android.content.Intent
 import android.graphics.Color
 import android.graphics.drawable.ColorDrawable
 import android.os.Bundle
@@ -26,7 +25,7 @@ import java.util.ArrayList
 class DirectionActivity : AppCompatActivity() {
     lateinit var view_pager_offers: ViewPager
     lateinit var dotsLayout: LinearLayout
-    var list: MutableList<String> = ArrayList()
+    var list: MutableList<Int> = ArrayList()
     var count = 0
     lateinit var rv_ser: RecyclerView
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -51,9 +50,9 @@ class DirectionActivity : AppCompatActivity() {
     private fun initViews() {
         view_pager_offers = findViewById(R.id.view_pager_offers)
         dotsLayout = findViewById(R.id.layoutDots)
-        list.add("https://picsum.photos/200/300")
-        list.add("https://picsum.photos/200/300?grayscale")
-        list.add("https://picsum.photos/200/300/?blur")
+        list.add(R.drawable.nearest_image_two)
+        list.add(R.drawable.nearest_image_one)
+        list.add(R.drawable.nearest_image_two)
         val viewPagerAdapter = ServiceImagesAdapter(applicationContext, list)
         view_pager_offers.setAdapter(viewPagerAdapter)
         view_pager_offers.setAdapter(viewPagerAdapter)

@@ -18,9 +18,9 @@
         android:text="Rate your last service at "
         android:layout_marginTop="@dimen/_10sdp"
         android:textSize="@dimen/_16ssp"
-        android:textColor="@color/black"
+        android:textColor="@color/black_light_apply"
+        android:fontFamily="@font/sk_modernist_bolds"
         android:layout_gravity="center"
-        android:textStyle="bold"
         android:layout_marginStart="@dimen/_10sdp"
         android:layout_marginEnd="@dimen/_10sdp"
 
@@ -30,9 +30,9 @@
         android:layout_height="wrap_content"
         android:text="Suspendisse Hairdresser"
         android:textSize="@dimen/_11ssp"
+       android:fontFamily="@font/dm_sans_bold"
         android:textColor="@color/primary_color"
         android:layout_gravity="center"
-        android:textStyle="bold"
         android:layout_marginStart="@dimen/_10sdp"
         android:layout_marginEnd="@dimen/_10sdp"
 
@@ -41,14 +41,14 @@
 
     <RatingBar
         android:id="@+id/rating_bar"
-        style="?android:attr/ratingBarStyle"
+        android:theme="@style/RatingBar"
+        android:stepSize="0.0"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="@dimen/_10sdp"
         android:max="5"
         android:numStars="5"
         android:rating="4.0"
-        android:stepSize="0.0"
         android:layout_gravity="center"
 
         />
@@ -59,7 +59,8 @@
         android:layout_height="wrap_content"
         android:text="Write Your Comment here"
         android:textSize="@dimen/_12ssp"
-        android:textColor="@color/black"
+        android:textColor="@color/black_light_apply"
+        android:fontFamily="@font/sk_modernist_regular"
         android:layout_gravity="center|start"
         android:layout_marginTop="@dimen/_10sdp"
         android:paddingStart="@dimen/_5sdp"
@@ -72,6 +73,7 @@
         android:layout_height="@dimen/_30sdp"
         android:hint="Write here"
         android:textSize="@dimen/_12ssp"
+        android:fontFamily="@font/sk_modernist_regular"
         android:textColor="@color/black"
         android:inputType="textEmailAddress"
         android:layout_gravity="center|start"
@@ -98,12 +100,14 @@
         <Button
             android:id="@+id/btn_submit"
             android:layout_width="0sp"
-            android:layout_weight="1"
             android:layout_height="@dimen/_30sdp"
+            android:layout_weight="1"
             android:background="@drawable/btn_bg"
             android:text="Submit"
-            android:textSize="@dimen/_13ssp"
+            android:textAllCaps="false"
+android:fontFamily="@font/sk_modernist_regular"
             android:textColor="@color/white"
+            android:textSize="@dimen/_13ssp"
 
 
             />

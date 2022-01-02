@@ -100,21 +100,21 @@
                         android:layout_height="wrap_content"
                         android:layout_gravity="center|start"
                         android:text="Our Services"
+                        android:fontFamily="@font/sk_modernist_bolds"
                         android:textColor="@color/black"
                         android:textSize="@dimen/_16ssp" />
 
                 </FrameLayout>
 
+
                 <androidx.recyclerview.widget.RecyclerView
                     android:id="@+id/rv_cat"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="@dimen/_10sdp"
                     android:orientation="horizontal"
                     app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
                     tools:itemCount="100"
                     tools:listitem="@layout/category_adapter_item" />
-
 
                 <TextView
                     android:layout_width="wrap_content"
@@ -122,9 +122,9 @@
                     android:layout_gravity="center|start"
                     android:layout_marginTop="@dimen/_20sdp"
                     android:text="Select Hair Service"
+                    android:fontFamily="@font/sk_modernist_bolds"
                     android:textColor="@color/black"
-                    android:textSize="@dimen/_16ssp"
-                    android:textStyle="bold" />
+                    android:textSize="@dimen/_16ssp"/>
 
 
                 <LinearLayout
@@ -145,16 +145,17 @@
                             android:layout_height="wrap_content"
                             android:layout_gravity="center|start"
                             android:text="Hair Coloring"
+                            android:fontFamily="@font/sk_modernist_regular"
                             android:textColor="@color/black_500"
-                            android:textSize="@dimen/_14ssp"
-                            android:textStyle="bold" />
+                            android:textSize="@dimen/_14ssp" />
 
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_gravity="center|start"
                             android:text="$50.00"
-                            android:textColor="@color/black_light"
+                            android:fontFamily="@font/sk_modernist_regular"
+                            android:textColor="@color/text_color_menu"
                             android:textSize="@dimen/_10ssp"
 
                             />
@@ -199,16 +200,17 @@
                             android:layout_height="wrap_content"
                             android:layout_gravity="center|start"
                             android:text="Hair Coloring"
+                            android:fontFamily="@font/sk_modernist_regular"
                             android:textColor="@color/black_500"
-                            android:textSize="@dimen/_14ssp"
-                            android:textStyle="bold" />
+                            android:textSize="@dimen/_14ssp"/>
 
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_gravity="center|start"
                             android:text="$50.00"
-                            android:textColor="@color/black_light"
+                            android:fontFamily="@font/sk_modernist_regular"
+                            android:textColor="@color/text_color_menu"
                             android:textSize="@dimen/_10ssp"
 
                             />
@@ -220,19 +222,16 @@
                         android:layout_height="wrap_content"
                         android:layout_gravity="center"
                         android:background="@drawable/et_bg_primary"
-                        android:padding="@dimen/_5sdp">
+                        android:padding="@dimen/_3sdp">
 
                         <TextView
                             android:layout_width="@dimen/_20sdp"
                             android:layout_height="@dimen/_20sdp"
                             android:layout_centerInParent="true"
+                            android:fontFamily="@font/sk_modernist_regular"
                             android:gravity="center"
                             android:text="Get"
-                            android:textColor="@color/primary_color"
-                            android:textStyle="bold"
-
-
-                            />
+                            android:textColor="@color/primary_color" />
 
 
                     </RelativeLayout>
@@ -259,14 +258,16 @@
                             android:text="Hair Coloring"
                             android:textColor="@color/black_500"
                             android:textSize="@dimen/_14ssp"
-                            android:textStyle="bold" />
+                            android:fontFamily="@font/sk_modernist_regular"
+                            />
 
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_gravity="center|start"
                             android:text="$50.00"
-                            android:textColor="@color/black_light"
+                            android:fontFamily="@font/sk_modernist_regular"
+                            android:textColor="@color/text_color_menu"
                             android:textSize="@dimen/_10ssp"
 
                             />
@@ -278,7 +279,7 @@
                         android:layout_height="wrap_content"
                         android:layout_gravity="center"
                         android:background="@drawable/et_bg_primary"
-                        android:padding="@dimen/_5sdp">
+                        android:padding="@dimen/_3sdp">
 
                         <TextView
                             android:layout_width="@dimen/_20sdp"
@@ -287,10 +288,7 @@
                             android:gravity="center"
                             android:text="Get"
                             android:textColor="@color/primary_color"
-                            android:textStyle="bold"
-
-
-                            />
+                            android:fontFamily="@font/sk_modernist_regular" />
 
 
                     </RelativeLayout>
@@ -304,9 +302,9 @@
                     android:layout_gravity="center|start"
                     android:layout_marginTop="@dimen/_20sdp"
                     android:text="Select Hair Service"
+                    android:fontFamily="@font/dm_sans_bold"
                     android:textColor="@color/black"
-                    android:textSize="@dimen/_16ssp"
-                    android:textStyle="bold" />
+                    android:textSize="@dimen/_16ssp" />
 
 
                 <LinearLayout
@@ -329,14 +327,15 @@
                             android:text="Hair Coloring"
                             android:textColor="@color/black_500"
                             android:textSize="@dimen/_14ssp"
-                            android:textStyle="bold" />
+                            android:fontFamily="@font/sk_modernist_regular" />
 
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_gravity="center|start"
                             android:text="$50.00"
-                            android:textColor="@color/black_light"
+                            android:fontFamily="@font/sk_modernist_regular"
+                            android:textColor="@color/text_color_menu"
                             android:textSize="@dimen/_10ssp"
 
                             />
@@ -370,6 +369,7 @@
                     android:layout_marginTop="@dimen/_20sdp"
                     android:background="@drawable/btn_bg"
                     android:textAllCaps="false"
+                    android:fontFamily="@font/sk_modernist_regular"
                     android:text="Select Date &amp; time"
                     android:textColor="@color/white"
                     android:textSize="@dimen/_13ssp"
@@ -395,16 +395,17 @@
                             android:layout_height="wrap_content"
                             android:layout_gravity="center|start"
                             android:text="Hair Coloring"
+                            android:fontFamily="@font/sk_modernist_regular"
                             android:textColor="@color/black_500"
-                            android:textSize="@dimen/_14ssp"
-                            android:textStyle="bold" />
+                            android:textSize="@dimen/_14ssp" />
 
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_gravity="center|start"
                             android:text="$50.00"
-                            android:textColor="@color/black_light"
+                            android:fontFamily="@font/sk_modernist_regular"
+                            android:textColor="@color/text_color_menu"
                             android:textSize="@dimen/_10ssp"
 
                             />
@@ -424,10 +425,8 @@
                             android:layout_centerInParent="true"
                             android:gravity="center"
                             android:text="Get"
+                            android:fontFamily="@font/sk_modernist_regular"
                             android:textColor="@color/primary_color"
-                            android:textStyle="bold"
-
-
                             />
 
 

@@ -54,7 +54,8 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="Select service"
-                        android:textSize="@dimen/_16ssp"
+                        android:fontFamily="@font/sk_modernist_mono"
+                        android:textSize="@dimen/_15ssp"
                         android:textColor="@color/black"
                         android:layout_gravity="center|start"
                         />
@@ -64,6 +65,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="See All"
+                        android:fontFamily="@font/sk_modernist_regular"
                         android:textSize="@dimen/_12ssp"
                         android:textColor="@color/black_light"
                         android:layout_gravity="center|end"
@@ -75,22 +77,21 @@
                     android:id="@+id/rv_cat"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="@dimen/_10sdp"
                     tools:itemCount="100"
                     app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
                     tools:listitem="@layout/category_adapter_item"
                     android:orientation="horizontal"
                     />
+
                 <androidx.recyclerview.widget.RecyclerView
                     android:id="@+id/rv_ser"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:layout_marginTop="@dimen/_10sdp"
-                    tools:itemCount="100"
-                    app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
-                    tools:listitem="@layout/service_list_adapter_item"
                     android:orientation="horizontal"
-                    />
+                    app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                    tools:itemCount="100"
+                    tools:listitem="@layout/service_list_adapter_item" />
 
             </LinearLayout>
 

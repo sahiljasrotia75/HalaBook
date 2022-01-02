@@ -18,6 +18,7 @@
             android:layout_height="wrap_content"
             android:text="Popular Salons Near You"
             android:textSize="@dimen/_15ssp"
+            android:fontFamily="@font/sk_modernist_mono"
             android:textColor="@color/black"
             android:layout_gravity="center|start"
             />
@@ -27,6 +28,7 @@
             android:layout_height="wrap_content"
             android:text="See All"
             android:textSize="@dimen/_12ssp"
+            android:fontFamily="@font/sk_modernist_regular"
             android:textColor="@color/black_light"
             android:layout_gravity="center|end"
             />

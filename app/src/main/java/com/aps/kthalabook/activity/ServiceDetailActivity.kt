@@ -5,11 +5,14 @@ import android.os.Bundle
 import android.view.View
 import android.widget.LinearLayout
 import androidx.appcompat.app.AppCompatActivity
+import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import androidx.viewpager.widget.ViewPager
 import androidx.viewpager.widget.ViewPager.OnPageChangeListener
 import com.aps.kthalabook.R
+import com.aps.kthalabook.adapter.CategoryAdapter
 import com.aps.kthalabook.adapter.ServiceImagesAdapter
+import com.aps.kthalabook.callbacks.CommonInterface
 import com.aps.kthalabook.util.Utility
 
 import java.util.ArrayList
@@ -18,13 +21,14 @@ import java.util.ArrayList
 class ServiceDetailActivity : AppCompatActivity() {
     lateinit var view_pager_offers: ViewPager
     lateinit var dotsLayout: LinearLayout
-    var list: MutableList<String> = ArrayList()
+    var list: MutableList<Int> = ArrayList()
     var count = 0
-    var rv_cat: RecyclerView? = null
+    lateinit var rv_cat: RecyclerView
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_service_detail)
         initViews()
+        setCategoryAdapter()
         manageClickListener()
     }
 
@@ -49,10 +53,13 @@ class ServiceDetailActivity : AppCompatActivity() {
 
     fun initViews() {
         view_pager_offers = findViewById(R.id.view_pager_offers)
+        rv_cat = findViewById(R.id.rv_cat)
+        rv_cat.layoutManager = (LinearLayoutManager(this, RecyclerView.HORIZONTAL, false))
+
         dotsLayout = findViewById(R.id.layoutDots)
-        list.add("https://picsum.photos/200/300")
-        list.add("https://picsum.photos/200/300?grayscale")
-        list.add("https://picsum.photos/200/300/?blur")
+        list.add(R.drawable.nearest_image_two)
+        list.add(R.drawable.nearest_image_one)
+        list.add(R.drawable.nearest_image_two)
         val viewPagerAdapter = ServiceImagesAdapter(applicationContext, list)
         view_pager_offers.setAdapter(viewPagerAdapter)
         view_pager_offers.setAdapter(viewPagerAdapter)
@@ -71,5 +78,14 @@ class ServiceDetailActivity : AppCompatActivity() {
             override fun onPageScrollStateChanged(state: Int) {}
         })
         Utility().addBottomDots(list.size, 0, dotsLayout, applicationContext)
+    }
+
+    fun setCategoryAdapter() {
+        rv_cat!!.adapter = CategoryAdapter(
+            object : CommonInterface {
+                override fun onItemClicked(type: String, position: Int) {
+                    startActivity(Intent(this@ServiceDetailActivity, ServiceListActivity::class.java))
+                }
+            })
     }
 }

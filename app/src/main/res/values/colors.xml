@@ -20,5 +20,9 @@
     <color name="light_gray_dot">#C4C4C4</color>
     <color name="dark_cyan">#0B735F</color>
     <color name="transparent">#00000000</color>
+    <color name="stoke_color">#DFE2E5</color>
+    <color name="light_grey_rating">#E4E4E4</color>
+    <color name="black_light_apply">#3A3A3A</color>
+    <color name="text_color_menu">#77838F</color>
 
 </resources>

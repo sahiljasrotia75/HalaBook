@@ -53,4 +53,10 @@
         <item name="alpha">0.7</item>
     </style>
 
+    <style name="RatingBar" parent="Theme.AppCompat">
+        <item name="colorControlNormal">@color/light_grey_rating</item>
+        <item name="colorControlActivated">@color/secondry_color</item>
+        
+    </style>
+
 </resources>

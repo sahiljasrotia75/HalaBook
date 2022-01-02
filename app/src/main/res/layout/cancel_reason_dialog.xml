@@ -100,6 +100,8 @@
                 android:layout_height="@dimen/_30sdp"
                 android:background="@drawable/btn_bg"
                 android:text="Submit"
+                android:textAllCaps="false"
+
                 android:textSize="@dimen/_13ssp"
                 android:textColor="@color/white"
 
@@ -110,6 +112,8 @@
                 android:layout_height="@dimen/_30sdp"
                 android:background="@drawable/secondry_btn_bg"
                 android:text="Skip"
+                android:textAllCaps="false"
+
                 android:textSize="@dimen/_13ssp"
                 android:textColor="@color/black"
                 android:backgroundTint="@color/white"

@@ -63,7 +63,7 @@
                <de.hdodenhof.circleimageview.CircleImageView
                    android:layout_width="@dimen/_70sdp"
                    android:layout_height="@dimen/_70sdp"
-                   android:src="@drawable/profile_picture"
+                   android:src="@drawable/profile_image"
                    android:layout_alignParentEnd="true"
                    android:layout_gravity="center"
                    android:layout_marginTop="@dimen/_10sdp"
@@ -225,6 +225,8 @@
                    android:layout_height="@dimen/_30sdp"
                    android:background="@drawable/btn_bg"
                    android:text="Save"
+                   android:textAllCaps="false"
+
                    android:layout_gravity="center"
                    android:gravity="center"
                    android:textSize="@dimen/_13ssp"

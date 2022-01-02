@@ -102,6 +102,7 @@
                         android:layout_gravity="center|start"
                         android:text="Integer laoreet Hair Saloon"
                         android:textColor="@color/black"
+                        android:fontFamily="@font/sk_modernist_bolds"
                         android:textSize="@dimen/_16ssp" />
 
                     <RatingBar
@@ -111,6 +112,7 @@
                         android:layout_height="wrap_content"
                         android:layout_gravity="center|start|top"
                         android:max="5"
+                        android:theme="@style/RatingBar"
                         android:numStars="5"
                         android:rating="4.0"
                         android:stepSize="0.0" />
@@ -123,8 +125,9 @@
                     android:text="Ultricies dolor street, 4/3"
                     android:drawableStart="@drawable/location"
                     android:drawablePadding="@dimen/_5sdp"
+                    android:fontFamily="@font/sk_modernist_regular"
                     android:drawableTint="@color/gray"
-                    android:textColor="@color/gray"
+                    android:textColor="@color/text_color_menu"
                     android:textSize="@dimen/_16ssp" />
 
 
@@ -143,8 +146,8 @@
                         android:layout_gravity="center|start"
                         android:gravity="center|start"
                         android:text="Our Booking"
+                        android:fontFamily="@font/sk_modernist_bolds"
                         android:textColor="@color/black"
-                        android:textStyle="bold"
                         android:textSize="@dimen/_16ssp" />
 
 
@@ -153,7 +156,7 @@
                         android:layout_weight="1"
                         android:layout_height="wrap_content"
                         android:text="Remaining"
-                        android:textColor="@color/gray"
+                        android:textColor="@color/text_color_menu"
                         android:textStyle="bold"
                         android:layout_gravity="center|start"
                         android:gravity="center|start"
@@ -164,6 +167,7 @@
                         android:layout_weight="1"
                         android:layout_height="wrap_content"
                         android:text="1d.12h.58m"
+                        android:fontFamily="@font/sk_modernist_bolds"
                         android:textColor="@color/secondry_color"
                         android:textStyle="bold"
                         android:layout_gravity="center|start"

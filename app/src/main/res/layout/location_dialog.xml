@@ -32,9 +32,9 @@
         android:layout_gravity="center"
         android:gravity="center"
         android:textStyle="bold"
+        android:fontFamily="@font/dm_sans_bold"
         android:layout_marginStart="@dimen/_10sdp"
         android:layout_marginEnd="@dimen/_10sdp"
-        style="@style/sk_modernist_regular"
         />
 
 
@@ -56,8 +56,9 @@
             android:layout_height="@dimen/_30sdp"
             android:background="@drawable/secondry_btn_bg"
             android:text="No"
+            android:elevation="0dp"
             android:textAllCaps="false"
-            android:fontFamily="@font/sk_modernist_regular"
+            android:fontFamily="@font/sk_modernist_bolds"
             android:textSize="@dimen/_12ssp"
             android:textColor="@color/white"
 
@@ -69,6 +70,8 @@
             android:layout_height="@dimen/_30sdp"
             android:background="@drawable/btn_bg"
             android:text="Yes"
+            android:fontFamily="@font/sk_modernist_bolds"
+            android:elevation="0dp"
             android:textAllCaps="false"
             android:textSize="@dimen/_13ssp"
             android:textColor="@color/white"

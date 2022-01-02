@@ -64,9 +64,9 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center|start"
             android:text="Commodo Hair Saloon"
+            android:fontFamily="@font/sk_modernist_bolds"
             android:textColor="@color/black"
-            android:textSize="@dimen/_12ssp"
-            android:textStyle="bold" />
+            android:textSize="@dimen/_12ssp"/>
 
         <RatingBar
             android:id="@+id/rating_bar"
@@ -77,6 +77,7 @@
             android:layout_marginRight="45dp"
             android:max="5"
             android:numStars="5"
+            android:theme="@style/RatingBar"
             android:rating="4.0"
             android:stepSize="0.0" />
 
@@ -88,10 +89,11 @@
             android:layout_gravity="center|start"
             android:drawablePadding="@dimen/_5sdp"
             android:gravity="center|start"
+            android:fontFamily="@font/sk_modernist_regular"
             android:layout_marginTop="@dimen/_5sdp"
             android:drawableStart="@drawable/location"
             android:text="Vestibulum scelerisque"
-            android:textColor="@color/black_light"
+            android:textColor="@color/text_color_menu"
             android:textSize="@dimen/_12ssp" />
 
         <Button
@@ -101,6 +103,8 @@
             android:layout_height="@dimen/_25sdp"
             android:background="@drawable/btn_bg"
             android:text="Book Now"
+            android:textAllCaps="false"
+
             android:layout_gravity="center|end"
             android:textSize="@dimen/_10ssp"
             android:textColor="@color/white"

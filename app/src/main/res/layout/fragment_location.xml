@@ -72,6 +72,7 @@
                         android:layout_height="wrap_content"
                         android:layout_gravity="center|start"
                         android:text="Nearest Salon"
+                        android:fontFamily="@font/sk_modernist_bolds"
                         android:textColor="@color/black"
                         android:textSize="@dimen/_14ssp" />
 
@@ -81,7 +82,8 @@
                         android:layout_height="wrap_content"
                         android:layout_gravity="center|end"
                         android:text="Maximize"
-                        android:textColor="@color/gray"
+                        android:fontFamily="@font/sk_modernist_regular"
+                        android:textColor="@color/text_color_menu"
                         android:textSize="@dimen/_12ssp"
                         android:gravity="center|end"
                         />
@@ -95,11 +97,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="@dimen/_10sdp"
-                    android:orientation="horizontal"
-                    />
-
-
-
+                    android:orientation="horizontal" />
 
 
             </LinearLayout>

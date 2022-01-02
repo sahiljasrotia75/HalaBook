@@ -67,8 +67,8 @@
                 android:layout_gravity="center|start"
                 android:text="Commodo Hair Saloon"
                 android:textColor="@color/black"
-                android:textSize="@dimen/_12ssp"
-                android:textStyle="bold" />
+                android:fontFamily="@font/sk_modernist_bolds"
+                android:textSize="@dimen/_12ssp"/>
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -85,7 +85,8 @@
                     android:gravity="center|start"
                     android:drawablePadding="@dimen/_5sdp"
                     android:text="Hair Cut"
-                    android:textColor="@color/black_light"
+                    android:fontFamily="@font/sk_modernist_regular"
+                    android:textColor="@color/text_color_menu"
                     android:textSize="@dimen/_10ssp" />
 
                 <TextView
@@ -95,7 +96,7 @@
                     android:gravity="center|end"
                     android:drawablePadding="@dimen/_5sdp"
                     android:text="$24"
-                    android:textColor="@color/black_light"
+                    android:textColor="@color/text_color_menu"
                     android:textSize="@dimen/_10ssp" />
 
 
@@ -118,17 +119,18 @@
                     android:layout_height="wrap_content"
                     android:orientation="vertical"
                     >
+
+
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_gravity="center|start"
-                        android:gravity="center|start"
                         android:drawablePadding="@dimen/_5sdp"
+                        android:gravity="center|start"
                         android:text="Remaining"
-                        android:textColor="@color/black_light"
+                        android:fontFamily="@font/sk_modernist_regular"
+                        android:textColor="@color/text_color_menu"
                         android:textSize="@dimen/_10ssp" />
-
-
 
                     <TextView
                         android:layout_width="match_parent"
@@ -137,6 +139,7 @@
                         android:gravity="center|start"
                         android:drawablePadding="@dimen/_5sdp"
                         android:text="1d.12h.58m"
+                        android:fontFamily="@font/sk_modernist_bolds"
                         android:textColor="@color/secondry_color"
                         android:textSize="@dimen/_10ssp" />
 
@@ -151,6 +154,8 @@
                     android:layout_height="@dimen/_25sdp"
                     android:background="@drawable/btn_bg"
                     android:text="Direction"
+                    android:textAllCaps="false"
+                    android:fontFamily="@font/sk_modernist_regular"
                     android:layout_gravity="center"
                     android:textSize="@dimen/_10ssp"
                     android:textColor="@color/white"

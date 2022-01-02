@@ -62,7 +62,7 @@
     <EditText
         android:layout_width="match_parent"
         android:layout_height="@dimen/_40sdp"
-        android:hint="Email Address"
+        android:hint="Enter Email"
         android:textSize="@dimen/_12ssp"
         android:textColor="@color/black"
         android:inputType="textEmailAddress"
@@ -109,7 +109,7 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Sign-in with Apple  "
+        android:text="@string/sign_in_with_apple"
         android:textSize="@dimen/_14ssp"
         android:textColor="@color/black"
         android:layout_gravity="center"
@@ -126,7 +126,7 @@
             android:layout_marginTop="@dimen/_24sdp"
             android:drawableStart="@drawable/google"
             android:drawablePadding="@dimen/_10sdp"
-            android:text="Sign-in with Google"
+            android:text="@string/sign_in_with_google"
             android:textColor="@color/black"
             android:textSize="@dimen/_14ssp" />
 

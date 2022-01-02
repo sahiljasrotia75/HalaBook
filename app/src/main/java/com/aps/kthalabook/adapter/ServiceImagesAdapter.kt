@@ -10,7 +10,7 @@ import com.aps.kthalabook.R
 import com.bumptech.glide.Glide
 
 
-class ServiceImagesAdapter(private val context: Context, private val list: List<String>) :
+class ServiceImagesAdapter(private val context: Context, private val list: MutableList<Int>) :
     PagerAdapter() {
     override fun instantiateItem(container: ViewGroup, position: Int): Any {
         val view: View = LayoutInflater.from(context).inflate(

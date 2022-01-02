@@ -82,6 +82,7 @@
                         android:layout_height="wrap_content"
                         android:layout_gravity="center|start"
                         android:layout_weight="1"
+                        android:fontFamily="@font/sk_modernist_bolds"
                         android:text="Commodo Hair Saloon"
                         android:textColor="@color/black_500"
                         android:textSize="@dimen/_12ssp"
@@ -93,6 +94,7 @@
                         android:layout_gravity="center|start"
                         android:text="$ 654"
                         android:textColor="@color/black"
+                        android:fontFamily="@font/sk_modernist_bolds"
                         android:textSize="@dimen/_12ssp"
                         android:textStyle="bold" />
 
@@ -105,8 +107,9 @@
                     android:layout_gravity="center|start"
                     android:drawablePadding="@dimen/_5sdp"
                     android:gravity="center|start"
+                    android:fontFamily="@font/sk_modernist_regular"
                     android:text="Vestibulum scelerisque"
-                    android:textColor="@color/black_light"
+                    android:textColor="@color/text_color_menu"
                     android:textSize="@dimen/_10ssp" />
 
 
@@ -119,6 +122,7 @@
                     android:drawablePadding="@dimen/_5sdp"
                     android:gravity="center|start"
                     android:text="Date &amp; Time"
+                    android:fontFamily="@font/sk_modernist_regular"
                     android:textColor="@color/black_light"
                     android:textSize="@dimen/_10ssp" />
 

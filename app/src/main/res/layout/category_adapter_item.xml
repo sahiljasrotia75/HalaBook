@@ -19,19 +19,17 @@
         android:textStyle="bold"
         app:tint="@color/gray"
         android:padding="@dimen/_5sdp"
-
-
         />
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Haircut"
-        android:textSize="@dimen/_12ssp"
-        android:textColor="@color/black_light"
+        android:textSize="@dimen/_11ssp"
+        android:fontFamily="@font/sk_modernist_regular"
+        android:textColor="@color/text_color_menu"
         android:layout_gravity="center"
         android:layout_marginTop="@dimen/_5sdp"
-        style="@style/sf_pro_text"
 
         />
 
