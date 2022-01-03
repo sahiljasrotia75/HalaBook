@@ -70,8 +70,6 @@
             android:layout_centerInParent="true"
             android:gravity="center_vertical|center_horizontal"
             android:orientation="horizontal"
-            tools:layout_editor_absoluteX="0dp"
-            tools:layout_editor_absoluteY="65dp"
 
             />
 
@@ -84,7 +82,7 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="@dimen/_5sdp"
+                android:layout_marginTop="@dimen/_6sdp"
                 android:background="@drawable/top_round_drawable"
                 android:orientation="vertical"
                 android:padding="@dimen/_10sdp"
@@ -103,7 +101,7 @@
                         android:text="Integer laoreet Hair Saloon"
                         android:textColor="@color/black"
                         android:fontFamily="@font/sk_modernist_bolds"
-                        android:textSize="@dimen/_16ssp" />
+                        android:textSize="@dimen/_13ssp" />
 
                     <RatingBar
                         android:id="@+id/rating_bar"
@@ -126,9 +124,8 @@
                     android:drawableStart="@drawable/location"
                     android:drawablePadding="@dimen/_5sdp"
                     android:fontFamily="@font/sk_modernist_regular"
-                    android:drawableTint="@color/gray"
                     android:textColor="@color/text_color_menu"
-                    android:textSize="@dimen/_16ssp" />
+                    android:textSize="@dimen/_12ssp" />
 
 
 
@@ -148,7 +145,7 @@
                         android:text="Our Booking"
                         android:fontFamily="@font/sk_modernist_bolds"
                         android:textColor="@color/black"
-                        android:textSize="@dimen/_16ssp" />
+                        android:textSize="@dimen/_15ssp" />
 
 
                     <TextView
@@ -156,11 +153,11 @@
                         android:layout_weight="1"
                         android:layout_height="wrap_content"
                         android:text="Remaining"
+                        android:fontFamily="@font/sk_modernist_bolds"
                         android:textColor="@color/text_color_menu"
-                        android:textStyle="bold"
                         android:layout_gravity="center|start"
                         android:gravity="center|start"
-                        android:textSize="@dimen/_13ssp" />
+                        android:textSize="@dimen/_12ssp" />
 
                     <TextView
                         android:layout_width="0sp"
@@ -172,7 +169,7 @@
                         android:textStyle="bold"
                         android:layout_gravity="center|start"
                         android:gravity="center|start"
-                        android:textSize="@dimen/_13ssp"
+                        android:textSize="@dimen/_12ssp"
                         android:layout_marginStart="@dimen/_5sdp"/>
 
                 </LinearLayout>

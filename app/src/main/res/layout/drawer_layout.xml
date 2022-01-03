@@ -42,9 +42,9 @@
                         android:layout_gravity="center|start"
                         android:layout_weight="1"
                         android:text="Home"
-                        android:textColor="@color/black"
+                        android:fontFamily="@font/sk_modernist_bolds"
+                        android:textColor="@color/drawer_black_text_color"
                         android:textSize="@dimen/_12ssp"
-                        android:textStyle="bold"
 
                         />
 
@@ -52,7 +52,7 @@
                         android:layout_width="@dimen/_30sdp"
                         android:layout_height="@dimen/_30sdp"
                         android:padding="@dimen/_10sdp"
-                        android:src="@drawable/right_arrow"
+                        android:src="@drawable/ic_right_arrow_drawer"
 
                         />
                 </LinearLayout>
@@ -61,7 +61,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="@dimen/_1sdp"
                     android:layout_marginTop="@dimen/_2sdp"
-                    android:background="@color/gray_light"
+                    android:background="@color/view_color"
                     android:layout_marginEnd="@dimen/_20sdp"
                     />
 
@@ -88,17 +88,15 @@
                         android:layout_gravity="center|start"
                         android:layout_weight="1"
                         android:text="Notification"
-                        android:textColor="@color/black"
-                        android:textSize="@dimen/_12ssp"
-                        android:textStyle="bold"
-
-                        />
+                        android:fontFamily="@font/sk_modernist_bolds"
+                        android:textColor="@color/drawer_black_text_color"
+                        android:textSize="@dimen/_12ssp" />
 
                     <ImageView
                         android:layout_width="@dimen/_30sdp"
                         android:layout_height="@dimen/_30sdp"
                         android:padding="@dimen/_10sdp"
-                        android:src="@drawable/right_arrow"
+                        android:src="@drawable/ic_right_arrow_drawer"
 
                         />
                 </LinearLayout>
@@ -107,7 +105,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="@dimen/_1sdp"
                     android:layout_marginTop="@dimen/_2sdp"
-                    android:background="@color/gray_light"
+                    android:background="@color/view_color"
                     android:layout_marginEnd="@dimen/_20sdp" />
 
             </LinearLayout>
@@ -130,9 +128,9 @@
                         android:layout_gravity="center|start"
                         android:layout_weight="1"
                         android:text="Service Categories"
-                        android:textColor="@color/black"
                         android:textSize="@dimen/_12ssp"
-                        android:textStyle="bold"
+                        android:fontFamily="@font/sk_modernist_bolds"
+                        android:textColor="@color/drawer_black_text_color"
 
                         />
 
@@ -140,7 +138,7 @@
                         android:layout_width="@dimen/_30sdp"
                         android:layout_height="@dimen/_30sdp"
                         android:padding="@dimen/_10sdp"
-                        android:src="@drawable/right_arrow"
+                        android:src="@drawable/ic_right_arrow_drawer"
 
                         />
                 </LinearLayout>
@@ -149,7 +147,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="@dimen/_1sdp"
                     android:layout_marginTop="@dimen/_2sdp"
-                    android:background="@color/gray_light"
+                    android:background="@color/view_color"
                     android:layout_marginEnd="@dimen/_20sdp" />
 
             </LinearLayout>
@@ -171,9 +169,9 @@
                         android:layout_gravity="center|start"
                         android:layout_weight="1"
                         android:text="Nearest Salons"
-                        android:textColor="@color/black"
+                        android:fontFamily="@font/sk_modernist_bolds"
+                        android:textColor="@color/drawer_black_text_color"
                         android:textSize="@dimen/_12ssp"
-                        android:textStyle="bold"
 
                         />
 
@@ -181,7 +179,7 @@
                         android:layout_width="@dimen/_30sdp"
                         android:layout_height="@dimen/_30sdp"
                         android:padding="@dimen/_10sdp"
-                        android:src="@drawable/right_arrow"
+                        android:src="@drawable/ic_right_arrow_drawer"
 
                         />
                 </LinearLayout>
@@ -190,7 +188,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="@dimen/_1sdp"
                     android:layout_marginTop="@dimen/_2sdp"
-                    android:background="@color/gray_light"
+                    android:background="@color/view_color"
                     android:layout_marginEnd="@dimen/_20sdp" />
 
             </LinearLayout>
@@ -212,9 +210,8 @@
                         android:layout_gravity="center|start"
                         android:layout_weight="1"
                         android:text="Deals/Promotions"
-                        android:textColor="@color/black"
-                        android:textSize="@dimen/_12ssp"
-                        android:textStyle="bold"
+                        android:textSize="@dimen/_12ssp"  android:fontFamily="@font/sk_modernist_bolds"
+                        android:textColor="@color/drawer_black_text_color"
 
                         />
 
@@ -222,7 +219,7 @@
                         android:layout_width="@dimen/_30sdp"
                         android:layout_height="@dimen/_30sdp"
                         android:padding="@dimen/_10sdp"
-                        android:src="@drawable/right_arrow"
+                        android:src="@drawable/ic_right_arrow_drawer"
 
                         />
                 </LinearLayout>
@@ -231,7 +228,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="@dimen/_1sdp"
                     android:layout_marginTop="@dimen/_2sdp"
-                    android:background="@color/gray_light"
+                    android:background="@color/view_color"
                     android:layout_marginEnd="@dimen/_20sdp" />
 
             </LinearLayout>
@@ -254,9 +251,8 @@
                         android:layout_gravity="center|start"
                         android:layout_weight="1"
                         android:text="My booking"
-                        android:textColor="@color/black"
-                        android:textSize="@dimen/_12ssp"
-                        android:textStyle="bold"
+                        android:textSize="@dimen/_12ssp"  android:fontFamily="@font/sk_modernist_bolds"
+                        android:textColor="@color/drawer_black_text_color"
 
                         />
 
@@ -264,7 +260,7 @@
                         android:layout_width="@dimen/_30sdp"
                         android:layout_height="@dimen/_30sdp"
                         android:padding="@dimen/_10sdp"
-                        android:src="@drawable/right_arrow"
+                        android:src="@drawable/ic_right_arrow_drawer"
 
                         />
                 </LinearLayout>
@@ -273,7 +269,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="@dimen/_1sdp"
                     android:layout_marginTop="@dimen/_2sdp"
-                    android:background="@color/gray_light"
+                    android:background="@color/view_color"
                     android:layout_marginEnd="@dimen/_20sdp" />
 
             </LinearLayout>
@@ -295,9 +291,8 @@
                         android:layout_gravity="center|start"
                         android:layout_weight="1"
                         android:text="My Profile"
-                        android:textColor="@color/black"
-                        android:textSize="@dimen/_12ssp"
-                        android:textStyle="bold"
+                        android:textSize="@dimen/_12ssp"  android:fontFamily="@font/sk_modernist_bolds"
+                        android:textColor="@color/drawer_black_text_color"
 
                         />
 
@@ -305,7 +300,7 @@
                         android:layout_width="@dimen/_30sdp"
                         android:layout_height="@dimen/_30sdp"
                         android:padding="@dimen/_10sdp"
-                        android:src="@drawable/right_arrow"
+                        android:src="@drawable/ic_right_arrow_drawer"
 
                         />
                 </LinearLayout>
@@ -314,7 +309,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="@dimen/_1sdp"
                     android:layout_marginTop="@dimen/_2sdp"
-                    android:background="@color/gray_light"
+                    android:background="@color/view_color"
                     android:layout_marginEnd="@dimen/_20sdp" />
 
             </LinearLayout>
@@ -337,9 +332,8 @@
                         android:layout_gravity="center|start"
                         android:layout_weight="1"
                         android:text="Change Password"
-                        android:textColor="@color/black"
-                        android:textSize="@dimen/_12ssp"
-                        android:textStyle="bold"
+                        android:textSize="@dimen/_12ssp"  android:fontFamily="@font/sk_modernist_bolds"
+                        android:textColor="@color/drawer_black_text_color"
 
                         />
 
@@ -347,7 +341,7 @@
                         android:layout_width="@dimen/_30sdp"
                         android:layout_height="@dimen/_30sdp"
                         android:padding="@dimen/_10sdp"
-                        android:src="@drawable/right_arrow"
+                        android:src="@drawable/ic_right_arrow_drawer"
 
                         />
                 </LinearLayout>
@@ -356,7 +350,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="@dimen/_1sdp"
                     android:layout_marginTop="@dimen/_2sdp"
-                    android:background="@color/gray_light"
+                    android:background="@color/view_color"
                     android:layout_marginEnd="@dimen/_20sdp" />
 
             </LinearLayout>
@@ -378,9 +372,8 @@
                         android:layout_gravity="center|start"
                         android:layout_weight="1"
                         android:text="Privacy Policies"
-                        android:textColor="@color/black"
-                        android:textSize="@dimen/_12ssp"
-                        android:textStyle="bold"
+                        android:textSize="@dimen/_12ssp"  android:fontFamily="@font/sk_modernist_bolds"
+                        android:textColor="@color/drawer_black_text_color"
 
                         />
 
@@ -388,7 +381,7 @@
                         android:layout_width="@dimen/_30sdp"
                         android:layout_height="@dimen/_30sdp"
                         android:padding="@dimen/_10sdp"
-                        android:src="@drawable/right_arrow"
+                        android:src="@drawable/ic_right_arrow_drawer"
 
                         />
                 </LinearLayout>
@@ -397,7 +390,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="@dimen/_1sdp"
                     android:layout_marginTop="@dimen/_2sdp"
-                    android:background="@color/gray_light"
+                    android:background="@color/view_color"
                     android:layout_marginEnd="@dimen/_20sdp" />
 
             </LinearLayout>
@@ -419,9 +412,8 @@
                         android:layout_gravity="center|start"
                         android:layout_weight="1"
                         android:text="Terms &amp; Conditions"
-                        android:textColor="@color/black"
-                        android:textSize="@dimen/_12ssp"
-                        android:textStyle="bold"
+                        android:textSize="@dimen/_12ssp"  android:fontFamily="@font/sk_modernist_bolds"
+                        android:textColor="@color/drawer_black_text_color"
 
                         />
 
@@ -429,7 +421,7 @@
                         android:layout_width="@dimen/_30sdp"
                         android:layout_height="@dimen/_30sdp"
                         android:padding="@dimen/_10sdp"
-                        android:src="@drawable/right_arrow"
+                        android:src="@drawable/ic_right_arrow_drawer"
 
                         />
                 </LinearLayout>
@@ -438,7 +430,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="@dimen/_1sdp"
                     android:layout_marginTop="@dimen/_2sdp"
-                    android:background="@color/gray_light"
+                    android:background="@color/view_color"
                     android:layout_marginEnd="@dimen/_20sdp" />
 
             </LinearLayout>
@@ -461,9 +453,8 @@
                         android:layout_gravity="center|start"
                         android:layout_weight="1"
                         android:text="About Us"
-                        android:textColor="@color/black"
-                        android:textSize="@dimen/_12ssp"
-                        android:textStyle="bold"
+                        android:textSize="@dimen/_12ssp"  android:fontFamily="@font/sk_modernist_bolds"
+                        android:textColor="@color/drawer_black_text_color"
 
                         />
 
@@ -471,7 +462,7 @@
                         android:layout_width="@dimen/_30sdp"
                         android:layout_height="@dimen/_30sdp"
                         android:padding="@dimen/_10sdp"
-                        android:src="@drawable/right_arrow"
+                        android:src="@drawable/ic_right_arrow_drawer"
 
                         />
                 </LinearLayout>
@@ -480,7 +471,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="@dimen/_1sdp"
                     android:layout_marginTop="@dimen/_2sdp"
-                    android:background="@color/gray_light"
+                    android:background="@color/view_color"
                     android:layout_marginEnd="@dimen/_20sdp" />
 
             </LinearLayout>
@@ -493,9 +484,9 @@
                 android:layout_marginTop="@dimen/_10sdp"
                 android:gravity="center"
                 android:text="Logout"
+                android:fontFamily="@font/sk_modernist_bolds"
                 android:textColor="@color/secondry_color"
                 android:textSize="@dimen/_12ssp"
-                android:textStyle="bold"
 
                 />
 

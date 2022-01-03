@@ -23,11 +23,11 @@
             android:layout_height="wrap_content"
             android:text="Reason for your cancellation"
             android:layout_marginTop="@dimen/_10sdp"
-            android:textSize="@dimen/_19ssp"
+            android:textSize="@dimen/_16ssp"
             android:textColor="@color/black"
             android:layout_gravity="center"
             android:gravity="center"
-            android:textStyle="bold"
+            android:fontFamily="@font/sk_modernist_bolds"
 
 
             />
@@ -45,6 +45,8 @@
                 android:id="@+id/monthlyRb"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
+                android:textColor="@color/black_light"
+                android:fontFamily="@font/sk_modernist_regular"
                 android:text="I want to book another salon"
                 android:layout_weight="1" />
 
@@ -52,16 +54,25 @@
                 android:id="@+id/weeklyRadioBtn"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
+                android:fontFamily="@font/sk_modernist_regular"
+                android:textColor="@color/black_light"
+
                 android:text="I have booked mistakenly" />
 
             <RadioButton
                 android:id="@+id/weeklyRadioBtns"
                 android:layout_width="match_parent"
+                android:fontFamily="@font/sk_modernist_regular"
+                android:textColor="@color/black_light"
+
                 android:layout_height="match_parent"
                 android:text="Saloon asked me to cancel" />
             <RadioButton
                 android:id="@+id/weeklyRadioBtnsother"
                 android:layout_width="match_parent"
+                android:fontFamily="@font/sk_modernist_regular"
+                android:textColor="@color/black_light"
+
                 android:layout_height="match_parent"
                 android:text="other" />
 
@@ -72,9 +83,10 @@
 
         <EditText
             android:layout_width="match_parent"
-            android:layout_height="@dimen/_40sdp"
+            android:layout_height="@dimen/_35sdp"
             android:hint="Write here the reason"
             android:textSize="@dimen/_12ssp"
+            android:fontFamily="@font/sk_modernist_regular"
             android:textColor="@color/black"
             android:layout_gravity="center|start"
             android:layout_marginTop="@dimen/_10sdp"
@@ -101,24 +113,24 @@
                 android:background="@drawable/btn_bg"
                 android:text="Submit"
                 android:textAllCaps="false"
-
+android:fontFamily="@font/sk_modernist_bolds"
                 android:textSize="@dimen/_13ssp"
                 android:textColor="@color/white"
 
                 />
-            <Button
+            <TextView
                 android:id="@+id/btn_no"
-                android:layout_width="match_parent"
+                android:layout_width="wrap_content"
                 android:layout_height="@dimen/_30sdp"
-                android:background="@drawable/secondry_btn_bg"
                 android:text="Skip"
+                android:paddingHorizontal="@dimen/_6sdp"
+                android:gravity="center"
                 android:textAllCaps="false"
-
+                android:fontFamily="@font/sk_modernist_bolds"
+                android:layout_gravity="center"
                 android:textSize="@dimen/_13ssp"
-                android:textColor="@color/black"
-                android:backgroundTint="@color/white"
+                android:textColor="@color/secondry_color"
                 android:layout_marginTop="@dimen/_5sdp"
-
                 />
 
         </LinearLayout>

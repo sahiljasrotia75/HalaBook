@@ -76,7 +76,6 @@
                             android:animateLayoutChanges="true"
                             app:mcv_headerTextAppearance="@style/HeaderViewCustomText"
                             app:mcv_selectionMode="single"
-                            android:padding="8dp"
                             app:mcv_selectionColor="@color/white"
                             app:mcv_tileHeight="@dimen/_35sdp"
                             app:mcv_tileWidth="@dimen/_42sdp"
@@ -85,8 +84,7 @@
                             app:mcv_dateTextAppearance="@style/CalenderViewDayCustomText"
                             app:mcv_weekDayTextAppearance="@style/CalenderViewWeekCustomText"
                             app:mcv_firstDayOfWeek="monday"
-                            android:layout_marginStart="5dp"
-                            android:layout_marginEnd="5dp" />
+                            />
 
                         <androidx.constraintlayout.widget.ConstraintLayout
                             android:id="@+id/calendarHeader"

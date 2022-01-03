@@ -56,7 +56,7 @@ class MyScheduleActivity : AppCompatActivity(), MyScheduleListener,MyScheduleAda
 
     private fun setNearbyFilterListData(){
         val list= getScheduleSelectionItem()
-        bindingObj.rvMySchedules.layoutManager= GridLayoutManager(this, 3)
+        bindingObj.rvMySchedules.layoutManager= GridLayoutManager(this, 4)
         an= MyScheduleAdapter(this,list.toMutableList())
         bindingObj.rvMySchedules.adapter=an
     }

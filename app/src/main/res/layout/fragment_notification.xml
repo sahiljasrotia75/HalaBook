@@ -37,10 +37,10 @@
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
                     android:gravity="center"
+                    android:fontFamily="@font/sk_modernist_bolds"
                     android:text="My Notifications"
                     android:textColor="@color/black"
                     android:textSize="@dimen/_16ssp"
-                    android:textStyle="bold"
 
                     />
 
@@ -49,6 +49,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="@dimen/_30sdp"
                     app:tabMode="fixed"
+                    android:fontFamily="@font/sk_modernist_bolds"
                     app:tabGravity="fill"
                     android:layout_marginTop="@dimen/_5sdp"
                     android:layout_marginBottom="@dimen/_5sdp"
