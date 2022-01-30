@@ -9,4 +9,7 @@ class ProfileActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_profile)
     }
+    fun onBackPressed(view: android.view.View) {
+        super.onBackPressed()
+    }
 }

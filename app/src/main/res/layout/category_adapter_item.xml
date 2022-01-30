@@ -11,11 +11,11 @@
     >
 
     <ImageView
-        android:id="@+id/txv_lay_1"
+        android:id="@+id/iv_cat"
         android:layout_width="@dimen/_40sdp"
         android:layout_height="@dimen/_40sdp"
         android:gravity="center"
-        android:src="@drawable/cat_cutter"
+        android:src="@drawable/select_hair"
         android:textStyle="bold"
         app:tint="@color/gray"
         android:padding="@dimen/_5sdp"
@@ -25,7 +25,9 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Haircut"
-        android:textSize="@dimen/_11ssp"
+        android:id="@+id/txtName"
+        android:gravity="center"
+        android:textSize="@dimen/_10ssp"
         android:fontFamily="@font/sk_modernist_regular"
         android:textColor="@color/text_color_menu"
         android:layout_gravity="center"

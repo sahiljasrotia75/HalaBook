@@ -4,12 +4,12 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
     android:background="@color/primary_color"
+    android:orientation="vertical"
 
     >
 
-    <RelativeLayout
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:padding="@dimen/_10sdp">
@@ -18,33 +18,52 @@
             android:id="@+id/iv_menu"
             android:layout_width="@dimen/_30sdp"
             android:layout_height="@dimen/_30sdp"
-            android:src="@drawable/ic_back"
+            android:onClick="onBackPressed"
             android:padding="@dimen/_5sdp"
-            />
+            android:src="@drawable/ic_back" />
 
+        <EditText
+            android:id="@+id/et_search"
+            android:layout_width="0sp"
+            android:layout_height="@dimen/_30sdp"
+            android:layout_gravity="start|center"
+            android:layout_marginStart="@dimen/_10sdp"
+            android:layout_marginEnd="@dimen/_10sdp"
+            android:layout_weight="1"
+            android:singleLine="true"
+            android:fontFamily="@font/sk_modernist_regular"
+            android:background="@drawable/et_bg"
+            android:hint="Search for salon or treatment"
+            android:paddingStart="@dimen/_5sdp"
+            android:paddingEnd="@dimen/_5sdp"
+            android:textColor="@color/text_color_menu"
+            android:textSize="@dimen/_10ssp"
+            android:drawableEnd="@drawable/purple_search"
+            />
 
         <ImageView
             android:layout_width="@dimen/_30sdp"
             android:layout_height="@dimen/_30sdp"
-            android:src="@drawable/profile_image"
             android:layout_alignParentEnd="true"
+            android:src="@drawable/profile_image"
 
             />
 
 
-    </RelativeLayout>
+    </LinearLayout>
 
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:orientation="vertical"
-        android:background="@drawable/top_round_drawable"
-        android:padding="@dimen/_14sdp"
         android:layout_marginTop="@dimen/_20sdp"
+        android:background="@drawable/top_round_drawable"
+        android:orientation="vertical"
+        android:padding="@dimen/_14sdp"
 
 
         >
+
         <androidx.core.widget.NestedScrollView
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
@@ -53,17 +72,16 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:orientation="vertical"
-                >
+                android:orientation="vertical">
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
-                    android:gravity="center"
                     android:layout_marginStart="@dimen/_30sdp"
-                    android:layout_marginEnd="@dimen/_30sdp"
                     android:layout_marginTop="@dimen/_5sdp"
+                    android:layout_marginEnd="@dimen/_30sdp"
+                    android:gravity="center"
                     android:text="My Booking"
                     android:textColor="@color/black"
                     android:textSize="@dimen/_14ssp"
@@ -75,13 +93,13 @@
                     android:id="@+id/tab_layout"
                     android:layout_width="match_parent"
                     android:layout_height="@dimen/_30sdp"
-                    app:tabMode="fixed"
-                    app:tabGravity="fill"/>
+                    app:tabGravity="fill"
+                    app:tabMode="fixed" />
 
                 <androidx.recyclerview.widget.RecyclerView
                     android:id="@+id/rv_ser"
                     android:layout_width="match_parent"
-                    android:layout_height="match_parent"/>
+                    android:layout_height="match_parent" />
 
 
             </LinearLayout>
@@ -90,8 +108,6 @@
 
 
     </LinearLayout>
-
-
 
 
 </LinearLayout>

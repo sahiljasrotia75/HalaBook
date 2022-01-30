@@ -20,5 +20,8 @@ class LoginActivity : AppCompatActivity() {
         startActivity(Intent(applicationContext , RegisterActivity::class.java))
     }
 
+    fun onBackPressed(view: android.view.View) {
+        super.onBackPressed()
+    }
 
 }

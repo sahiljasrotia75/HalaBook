@@ -22,9 +22,9 @@
         android:fontFamily="@font/sk_modernist_bolds"
         android:padding="@dimen/_5sdp"
         android:text="Skip"
+        android:onClick="skipClicked"
         android:textColor="@color/secondry_color"
-        android:textSize="@dimen/_12sdp"
-        android:textStyle="bold" />
+        android:textSize="@dimen/_12sdp" />
 
     <RelativeLayout
         android:id="@+id/layout_viewPager"
@@ -53,13 +53,13 @@
         android:gravity="center_vertical|center_horizontal"
         android:orientation="horizontal"/>
 
-    <Button
+    <TextView
         android:id="@+id/btn_signup"
         style="@style/sk_modernist_regular"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="@dimen/_40sdp"
         android:textAllCaps="false"
-
+        android:gravity="center"
         android:layout_marginTop="@dimen/_20sdp"
         android:background="@drawable/btn_bg"
         android:onClick="registerClicked"

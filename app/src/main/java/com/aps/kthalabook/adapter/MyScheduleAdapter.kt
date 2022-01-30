@@ -20,8 +20,7 @@ class MyScheduleAdapter (
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): MyScheduleViewHolder {
-        return MyScheduleViewHolder(
-            ItemHaircutScheduleBinding.inflate(LayoutInflater.from(parent.context),
+        return MyScheduleViewHolder(ItemHaircutScheduleBinding.inflate(LayoutInflater.from(parent.context),
                 parent,false))
     }
 

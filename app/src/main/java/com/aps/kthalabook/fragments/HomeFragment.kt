@@ -9,15 +9,17 @@ import android.view.WindowManager
 import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
+import androidx.viewpager.widget.ViewPager
 import com.aps.kthalabook.R
-import com.aps.kthalabook.activity.CategoryListActivity
-import com.aps.kthalabook.activity.LocationServiceActivity
-import com.aps.kthalabook.activity.ServiceDetailActivity
-import com.aps.kthalabook.activity.ServiceListActivity
+import com.aps.kthalabook.activity.*
 import com.aps.kthalabook.adapter.CategoryAdapter
+import com.aps.kthalabook.adapter.ServiceAdapter
+import com.aps.kthalabook.adapter.ServiceImagesAdapter
 import com.aps.kthalabook.adapter.ServiceListAdapter
 import com.aps.kthalabook.callbacks.CommonInterface
+import com.aps.kthalabook.model.getCategoryItem
 import com.aps.kthalabook.util.Utility
+import java.util.ArrayList
 
 
 /**
@@ -29,6 +31,10 @@ class HomeFragment : Fragment() {
     lateinit var view_c: View
     lateinit var rv_cat: RecyclerView
     lateinit var rv_ser: RecyclerView
+    lateinit var rv_deals: RecyclerView
+    var c_position = 0
+    var list: MutableList<Int> = ArrayList()
+    lateinit var view_pager_offers: ViewPager
 
     // TODO: Rename and change types of parameters
     private var mParam1: String? = null
@@ -48,21 +54,28 @@ class HomeFragment : Fragment() {
         // Inflate the layout for this fragment
         view_c = inflater.inflate(R.layout.fragment_home, container, false)
         activity?.window?.setSoftInputMode(WindowManager.LayoutParams.SOFT_INPUT_STATE_ALWAYS_HIDDEN);
+        c_position = 0
         initViews()
         setCategoryAdapter()
         setServiceAdapter()
+        setDealsAdapter()
         manageListener()
         return view_c
     }
 
+
     private fun manageListener() {
         view_c!!.findViewById<View>(R.id.txt_view_cat).setOnClickListener { v: View? ->
             startActivity(
-                Intent(
-                    context,
-                    CategoryListActivity::class.java
-                )
+                Intent(context, CategoryListActivity::class.java)
             )
+        }
+
+        view_c!!.findViewById<View>(R.id.txt_see_deals).setOnClickListener { v: View? ->
+            startActivity(Intent(context, ServiceListActivity::class.java))
+        }
+        view_c!!.findViewById<View>(R.id.txt_popular_see_all).setOnClickListener { v: View? ->
+            startActivity(Intent(context, LocationServiceActivity::class.java))
         }
     }
 
@@ -71,9 +84,9 @@ class HomeFragment : Fragment() {
         rv_ser!!.adapter = context?.let {
             ServiceListAdapter(it, object : CommonInterface {
                 override fun onItemClicked(type: String, position: Int) {
-                    if (type=="root") {
+                    if (type == "root") {
                         startActivity(Intent(context, ServiceDetailActivity::class.java))
-                    } else if (type=="rating") {
+                    } else if (type == "rating") {
                         Utility().ratingDialog(activity)
                     } else {
                         startActivity(Intent(context, LocationServiceActivity::class.java))
@@ -85,23 +98,53 @@ class HomeFragment : Fragment() {
     }
 
     private fun initViews() {
-        rv_cat = view_c!!.findViewById(R.id.rv_cat)
-        rv_ser = view_c!!.findViewById(R.id.rv_ser)
+        view_pager_offers = view_c.findViewById(R.id.view_pager_offers)
+        rv_cat = view_c.findViewById(R.id.rv_cat)
+        rv_ser = view_c.findViewById(R.id.rv_ser)
+        rv_deals = view_c.findViewById(R.id.rv_deals)
         rv_cat.layoutManager = (LinearLayoutManager(context, RecyclerView.HORIZONTAL, false))
         rv_ser.layoutManager = (LinearLayoutManager(context))
+        rv_deals.layoutManager = (LinearLayoutManager(context, RecyclerView.HORIZONTAL, false))
+
+        list.add(R.drawable.banner)
+        list.add(R.drawable.banner)
+        list.add(R.drawable.banner)
+        val viewPagerAdapter = ServiceImagesAdapter(activity!!, list)
+        view_pager_offers.adapter = viewPagerAdapter
+        view_pager_offers.addOnPageChangeListener(object : ViewPager.OnPageChangeListener {
+            override fun onPageScrolled(
+                position: Int,
+                positionOffset: Float,
+                positionOffsetPixels: Int
+            ) {
+            }
+
+            override fun onPageSelected(position: Int) {
+            }
+
+            override fun onPageScrollStateChanged(state: Int) {}
+        })
     }
 
     fun setCategoryAdapter() {
-
+        var list = getCategoryItem()
         rv_cat!!.adapter = CategoryAdapter(
-        object : CommonInterface {
-            override fun onItemClicked(type: String, position: Int) {
-                startActivity(Intent(context, ServiceListActivity::class.java))
-            }
-        })
+            object : CommonInterface {
+                override fun onItemClicked(type: String, position: Int) {
+//                startActivity(
+//                    Intent(context, CategoryListActivity::class.java)
+//                )
+                }
+            }, "Home", c_position, context = context!!, list.toMutableList())
+    }
 
-
-
+    private fun setDealsAdapter() {
+        rv_deals!!.adapter = ServiceAdapter("HORIZONTAL_MATCH",
+            object : CommonInterface {
+                override fun onItemClicked(type: String, position: Int) {
+                    startActivity(Intent(context, ServiceListActivity::class.java))
+                }
+            })
     }
 
     companion object {

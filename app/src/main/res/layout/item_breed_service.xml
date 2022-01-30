@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <data>
+
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/_5sdp"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:layout_width="0sp"
+            android:layout_height="wrap_content"
+            android:layout_weight="4"
+            android:orientation="vertical">
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center|start"
+                android:fontFamily="@font/sk_modernist_regular"
+                android:text="Hair Coloring"
+                android:textColor="@color/black_500"
+                android:textSize="@dimen/_12ssp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center|start"
+                android:fontFamily="@font/sk_modernist_regular"
+                android:text="$50.00"
+                android:textColor="@color/text_color_menu"
+                android:textSize="@dimen/_10ssp"
+
+                />
+
+        </LinearLayout>
+
+        <RelativeLayout
+            android:id="@+id/rl_tick"
+            android:layout_width="@dimen/_70sdp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:visibility="gone"
+            android:background="@drawable/btn_bg"
+            android:padding="@dimen/_5sdp">
+
+            <ImageView
+                android:layout_width="@dimen/_14sdp"
+                android:layout_height="@dimen/_14sdp"
+                android:layout_centerInParent="true"
+                android:src="@drawable/ic_check" />
+
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="@dimen/_70sdp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:id="@+id/rl_get"
+            android:background="@drawable/et_bg_primary"
+            android:padding="@dimen/_2sdp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:fontFamily="@font/sk_modernist_regular"
+                android:gravity="center"
+                android:text="Get"
+                android:textSize="@dimen/_10sdp"
+                android:textColor="@color/primary_color" />
+
+
+        </RelativeLayout>
+
+    </LinearLayout>
+</layout>

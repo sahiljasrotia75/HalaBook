@@ -94,7 +94,7 @@
                 android:textColor="@color/text_color_menu"
                 android:textSize="@dimen/_12ssp" />
 
-            <Button
+            <TextView
                 android:id="@+id/btn_book"
                 android:layout_width="wrap_content"
                 android:layout_weight="1"
@@ -102,6 +102,7 @@
                 android:layout_height="@dimen/_25sdp"
                 android:background="@drawable/btn_bg"
                 android:text="Book Now"
+                android:gravity="center"
                 android:layout_gravity="center|end"
                 android:textSize="@dimen/_10ssp"
                 android:textColor="@color/white"

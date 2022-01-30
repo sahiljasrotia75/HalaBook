@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools">
 
     <data>
+
         <variable
             name="listener"
             type="com.aps.kthalabook.activity.MyScheduleListener" />
@@ -11,9 +12,9 @@
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:orientation="vertical"
         android:layout_height="match_parent"
         android:background="@color/primary_color"
+        android:orientation="vertical"
         tools:context=".activity.MyScheduleActivity">
 
         <RelativeLayout
@@ -25,6 +26,7 @@
                 android:id="@+id/iv_menu"
                 android:layout_width="@dimen/_30sdp"
                 android:layout_height="@dimen/_30sdp"
+                android:onClick="onBackPressed"
                 android:padding="@dimen/_5sdp"
                 android:src="@drawable/ic_back" />
 
@@ -45,10 +47,10 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:orientation="vertical"
+            android:layout_marginTop="@dimen/_20sdp"
             android:background="@drawable/top_round_drawable"
-            android:padding="@dimen/_14sdp"
-            android:layout_marginTop="@dimen/_20sdp">
+            android:orientation="vertical"
+            android:padding="@dimen/_14sdp">
 
             <androidx.core.widget.NestedScrollView
                 android:id="@+id/nestedScrollMySchedule"
@@ -58,33 +60,32 @@
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:orientation="vertical"
-                    android:animateLayoutChanges="true">
+                    android:animateLayoutChanges="true"
+                    android:orientation="vertical">
 
                     <RelativeLayout
                         android:id="@+id/calendarLayout"
                         android:layout_width="match_parent"
-                        android:background="@color/transparent"
                         android:layout_height="wrap_content"
-                        android:animateLayoutChanges="true">
+                        android:animateLayoutChanges="true"
+                        android:background="@color/transparent">
 
                         <com.prolificinteractive.materialcalendarview.MaterialCalendarView
                             android:id="@+id/calendarViewMySchedule"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            app:mcv_showOtherDates="decorated_disabled"
                             android:animateLayoutChanges="true"
+                            app:mcv_dateTextAppearance="@style/CalenderViewDayCustomText"
+                            app:mcv_firstDayOfWeek="monday"
                             app:mcv_headerTextAppearance="@style/HeaderViewCustomText"
-                            app:mcv_selectionMode="single"
-                            app:mcv_selectionColor="@color/white"
-                            app:mcv_tileHeight="@dimen/_35sdp"
-                            app:mcv_tileWidth="@dimen/_42sdp"
                             app:mcv_leftArrow="@android:color/transparent"
                             app:mcv_rightArrow="@android:color/transparent"
-                            app:mcv_dateTextAppearance="@style/CalenderViewDayCustomText"
-                            app:mcv_weekDayTextAppearance="@style/CalenderViewWeekCustomText"
-                            app:mcv_firstDayOfWeek="monday"
-                            />
+                            app:mcv_selectionColor="@color/white"
+                            app:mcv_selectionMode="single"
+                            app:mcv_showOtherDates="decorated_disabled"
+                            app:mcv_tileHeight="@dimen/_35sdp"
+                            app:mcv_tileWidth="@dimen/_42sdp"
+                            app:mcv_weekDayTextAppearance="@style/CalenderViewWeekCustomText" />
 
                         <androidx.constraintlayout.widget.ConstraintLayout
                             android:id="@+id/calendarHeader"
@@ -135,9 +136,9 @@
                         </androidx.constraintlayout.widget.ConstraintLayout>
 
                         <View
-                            android:layout_below="@+id/calendarHeader"
                             android:layout_width="match_parent"
-                            android:layout_height="0.5dp" />
+                            android:layout_height="0.5dp"
+                            android:layout_below="@+id/calendarHeader" />
 
                     </RelativeLayout>
 
@@ -145,12 +146,12 @@
                         android:id="@+id/txtHaircutTime"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        android:layout_gravity="center"
                         android:fontFamily="@font/sk_modernist_bolds"
-                        android:textColor="@color/black_500"
-                        android:textSize="@dimen/_12sdp"
                         android:gravity="center"
                         android:text="Hair Cut Time"
-                        android:layout_gravity="center"
+                        android:textColor="@color/black_500"
+                        android:textSize="@dimen/_12sdp"
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintStart_toStartOf="parent"
@@ -162,8 +163,8 @@
                         android:layout_height="wrap_content"
                         android:layout_gravity="center_horizontal|center_vertical"
                         android:layout_marginTop="@dimen/_5sdp"
-                        tools:listitem="@layout/item_haircut_schedule"
-                        app:layoutManager="androidx.recyclerview.widget.GridLayoutManager" />
+                        app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
+                        tools:listitem="@layout/item_haircut_schedule" />
 
                     <ProgressBar
                         android:id="@+id/progressBar"
@@ -178,24 +179,26 @@
                         android:id="@+id/error_msg_txt"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_60sdp"
+                        android:drawablePadding="@dimen/_7sdp"
+                        android:fontFamily="@font/sk_modernist_regular"
+                        android:gravity="center"
                         android:text="@string/no_schedule_for_selected_date"
                         android:textAlignment="center"
-                        android:visibility="gone"
-                        android:drawablePadding="@dimen/_7sdp"
-                        android:layout_marginTop="@dimen/_60sdp"
-                        android:gravity="center"
-                        android:fontFamily="@font/sk_modernist_regular"
                         android:textColor="@color/gray"
-                        android:textSize="@dimen/_13sdp" />
+                        android:textSize="@dimen/_13sdp"
+                        android:visibility="gone" />
 
-                    <Button
-                        android:id="@+id/btn_login"
+                    <TextView
+                        android:id="@+id/btn_spe"
                         android:layout_width="match_parent"
                         android:layout_height="@dimen/_40sdp"
                         android:layout_marginTop="@dimen/_20sdp"
                         android:background="@drawable/btn_bg"
-                        android:textAllCaps="false"
+                        android:onClick="selectSpecialist"
+                        android:gravity="center"
                         android:text="Select Specialist"
+                        android:textAllCaps="false"
                         android:textColor="@color/white"
                         android:textSize="@dimen/_13ssp"
 

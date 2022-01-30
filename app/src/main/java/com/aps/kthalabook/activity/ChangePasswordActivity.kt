@@ -9,4 +9,7 @@ class ChangePasswordActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_change_password)
     }
+    fun onBackPressed(view: android.view.View) {
+        super.onBackPressed()
+    }
 }

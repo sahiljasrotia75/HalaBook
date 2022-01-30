@@ -4,35 +4,38 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".activities.LocationServiceActivity"
-    android:orientation="vertical"
-    >
+    android:orientation="vertical">
 
 
     <FrameLayout
         android:layout_width="match_parent"
         android:layout_height="@dimen/_250sdp">
 
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="fitXY"
+            android:src="@drawable/map" />
 
-        <com.google.android.gms.maps.MapView
-            xmlns:android="http://schemas.android.com/apk/res/android"
+        <com.google.android.gms.maps.MapView xmlns:android="http://schemas.android.com/apk/res/android"
             xmlns:map="http://schemas.android.com/apk/res-auto"
             android:id="@+id/mapView"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
+            android:background="#00000000"
             android:clickable="true"
+            android:visibility="gone"
             map:uiCompass="true"
-            map:zOrderOnTop="true"
             map:uiZoomControls="true"
-            android:background="#00000000" />
+            map:zOrderOnTop="true" />
 
         <ImageView
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:src="@drawable/service_image"
             android:scaleType="fitXY"
-            android:visibility="gone"
-            />
+            android:src="@drawable/service_image"
+            android:visibility="gone" />
+
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -42,6 +45,7 @@
                 android:id="@+id/iv_menu"
                 android:layout_width="@dimen/_30sdp"
                 android:layout_height="@dimen/_30sdp"
+                android:onClick="onBackPressed"
                 android:padding="@dimen/_5sdp"
                 android:src="@drawable/ic_back" />
 
@@ -124,12 +128,10 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_gravity="center|end"
+                        android:gravity="center|end"
                         android:text="Maximize"
                         android:textColor="@color/gray"
-                        android:textSize="@dimen/_12ssp"
-                        android:gravity="center|end"
-                        />
-
+                        android:textSize="@dimen/_12ssp" />
 
 
                 </FrameLayout>
@@ -139,11 +141,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="@dimen/_10sdp"
-                    android:orientation="horizontal"
-                  />
-
-
-
+                    android:orientation="horizontal" />
 
 
             </LinearLayout>
@@ -153,7 +151,6 @@
 
 
     </LinearLayout>
-
 
 
 </LinearLayout>

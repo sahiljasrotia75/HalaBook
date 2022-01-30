@@ -3,6 +3,7 @@ package com.aps.kthalabook.activity
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.view.View
 import android.widget.LinearLayout
 import androidx.viewpager.widget.ViewPager
 import androidx.viewpager.widget.ViewPager.OnPageChangeListener
@@ -33,6 +34,10 @@ class IntroActivity : AppCompatActivity() {
 
     }
 
+    fun skipClicked(view: View) {
+        startActivity(Intent(applicationContext , MainActivity::class.java))
+    }
+
     private fun initViews() {
         view_pager_offers = findViewById(R.id.view_pager_offers)
         dotsLayout = findViewById(R.id.layoutDots)
@@ -60,6 +65,10 @@ class IntroActivity : AppCompatActivity() {
             override fun onPageScrollStateChanged(state: Int) {}
         })
         Utility().addBottomDots(list.size, 0, dotsLayout, applicationContext)
+    }
+
+    fun onBackPressed(view: android.view.View) {
+        super.onBackPressed()
     }
 
 

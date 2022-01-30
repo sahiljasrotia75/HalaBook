@@ -37,10 +37,10 @@
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
                     android:gravity="center"
+                    android:fontFamily="@font/sk_modernist_bolds"
                     android:text="My Booking"
                     android:textColor="@color/black"
                     android:textSize="@dimen/_16ssp"
-                    android:textStyle="bold"
 
                     />
 

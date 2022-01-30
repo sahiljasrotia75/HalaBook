@@ -35,13 +35,14 @@
                 android:layout_marginStart="@dimen/_10sdp"
                 android:layout_marginEnd="@dimen/_10sdp"
                 android:layout_weight="1"
+                android:singleLine="true"
                 android:fontFamily="@font/sk_modernist_regular"
                 android:background="@drawable/et_bg"
                 android:hint="Search for salon or treatment"
                 android:paddingStart="@dimen/_5sdp"
                 android:paddingEnd="@dimen/_5sdp"
                 android:textColor="@color/text_color_menu"
-                android:textSize="@dimen/_12ssp"
+                android:textSize="@dimen/_10ssp"
                 android:drawableEnd="@drawable/purple_search"
                 />
 

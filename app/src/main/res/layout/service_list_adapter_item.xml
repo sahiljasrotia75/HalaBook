@@ -5,36 +5,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical"
-    android:layout_margin="@dimen/_5sdp">
+    >
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        >
-        <TextView
-            android:layout_width="0sp"
-            android:layout_weight="1"
-            android:layout_height="wrap_content"
-            android:text="Popular Salons Near You"
-            android:textSize="@dimen/_15ssp"
-            android:fontFamily="@font/sk_modernist_mono"
-            android:textColor="@color/black"
-            android:layout_gravity="center|start"
-            />
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="See All"
-            android:textSize="@dimen/_12ssp"
-            android:fontFamily="@font/sk_modernist_regular"
-            android:textColor="@color/black_light"
-            android:layout_gravity="center|end"
-            />
-
-
-    </LinearLayout>
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/rv_ser"

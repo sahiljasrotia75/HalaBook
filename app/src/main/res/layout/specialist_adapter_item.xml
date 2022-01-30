@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -7,41 +7,46 @@
     android:layout_margin="@dimen/_5sdp"
     android:elevation="@dimen/_5sdp"
     android:orientation="vertical"
-
     >
+
+
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="vertical">
+        android:orientation="vertical"
+        android:padding="@dimen/_5sdp"
 
+        >
 
-        <androidx.cardview.widget.CardView
-            android:layout_width="match_parent"
-            android:layout_height="@dimen/_100sdp"
-            app:cardBackgroundColor="@android:color/white"
-            app:cardCornerRadius="@dimen/_15sdp"
-            app:cardElevation="0dp">
-
-            <LinearLayout
+            <androidx.cardview.widget.CardView
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:orientation="horizontal">
+                android:layout_height="wrap_content"
+                app:cardCornerRadius="@dimen/_15sdp"
+                >
+
 
                 <ImageView
                     android:id="@+id/txv_lay_1"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:gravity="center"
-                    android:scaleType="fitXY"
-                    android:src="@drawable/user_image"
-                    android:textSize="@dimen/_15ssp"
-                    android:textStyle="bold"
-                    tools:text="Offer" />
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/user_one"
 
-            </LinearLayout>
+                    />
+                <View
+                    android:id="@+id/stroke_view"
+                    android:visibility="gone"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/image_round_bg_primary"
+                    />
 
-        </androidx.cardview.widget.CardView>
+
+            </androidx.cardview.widget.CardView>
+
+
+
 
 
         <LinearLayout
@@ -57,9 +62,10 @@
                 android:layout_gravity="center"
                 android:gravity="center"
                 android:text="Elon Gated"
+                android:textStyle="bold"
                 android:fontFamily="@font/sk_modernist_regular"
                 android:textColor="@color/text_color_menu"
-                android:textSize="@dimen/_11ssp" />
+                android:textSize="@dimen/_12ssp" />
 
 
             <TextView
@@ -75,5 +81,12 @@
 
         </LinearLayout>
     </LinearLayout>
-
-</LinearLayout>
+    <ImageView
+        android:id="@+id/iv_tick"
+        android:layout_width="@dimen/_20sdp"
+        android:layout_height="@dimen/_20sdp"
+        android:src="@drawable/ic_blue_tick"
+        android:visibility="gone"
+        android:layout_alignParentEnd="true"
+        />
+</RelativeLayout>

@@ -105,7 +105,7 @@
             >
 
 
-            <Button
+            <TextView
                 android:id="@+id/btn_yes"
                 android:layout_width="match_parent"
                 android:layout_weight="1"
@@ -113,6 +113,7 @@
                 android:background="@drawable/btn_bg"
                 android:text="Submit"
                 android:textAllCaps="false"
+                android:gravity="center"
 android:fontFamily="@font/sk_modernist_bolds"
                 android:textSize="@dimen/_13ssp"
                 android:textColor="@color/white"

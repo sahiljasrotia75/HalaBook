@@ -2,18 +2,35 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
+    android:layout_height="wrap_content"
     android:orientation="vertical"
     android:padding="@dimen/_10sdp">
 
-
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="@dimen/_20sdp"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:layout_height="wrap_content">
     <ImageView
         android:id="@+id/iv_menu"
-        android:layout_width="@dimen/_30sdp"
-        android:layout_height="@dimen/_30sdp"
+        android:layout_width="@dimen/_20sdp"
+        android:layout_height="@dimen/_20sdp"
         android:src="@drawable/ic_cancel"
         android:scaleType="fitXY"
         app:tint="@color/primary_color" />
+
+        <ImageView
+            android:id="@+id/iv_logo"
+            android:layout_width="wrap_content"
+            android:padding="@dimen/_20sdp"
+            android:layout_height="@dimen/_40sdp"
+            android:src="@drawable/ic_halabook_logo_horizontal"
+            android:scaleType="centerCrop"
+            android:layout_gravity="center"/>
+
+    </LinearLayout>
 
     <androidx.core.widget.NestedScrollView
         android:layout_width="match_parent"
@@ -28,7 +45,7 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="@dimen/_20sdp"
+                android:id="@+id/lin_home"
                 android:orientation="vertical">
 
                 <LinearLayout
@@ -115,6 +132,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="@dimen/_10sdp"
+                android:id="@+id/lin_select_category"
                 android:orientation="vertical">
 
                 <LinearLayout
@@ -155,6 +173,7 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:id="@+id/lin_near_salon"
                 android:layout_marginTop="@dimen/_10sdp"
                 android:orientation="vertical">
 
@@ -196,6 +215,7 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:id="@+id/lin_deals"
                 android:layout_marginTop="@dimen/_10sdp"
                 android:orientation="vertical">
 
@@ -277,6 +297,7 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:id="@+id/lin_my_profile"
                 android:layout_marginTop="@dimen/_10sdp"
                 android:orientation="vertical">
 
@@ -291,7 +312,8 @@
                         android:layout_gravity="center|start"
                         android:layout_weight="1"
                         android:text="My Profile"
-                        android:textSize="@dimen/_12ssp"  android:fontFamily="@font/sk_modernist_bolds"
+                        android:textSize="@dimen/_12ssp"
+                        android:fontFamily="@font/sk_modernist_bolds"
                         android:textColor="@color/drawer_black_text_color"
 
                         />
@@ -332,7 +354,8 @@
                         android:layout_gravity="center|start"
                         android:layout_weight="1"
                         android:text="Change Password"
-                        android:textSize="@dimen/_12ssp"  android:fontFamily="@font/sk_modernist_bolds"
+                        android:textSize="@dimen/_12ssp"
+                        android:fontFamily="@font/sk_modernist_bolds"
                         android:textColor="@color/drawer_black_text_color"
 
                         />
@@ -359,6 +382,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="@dimen/_10sdp"
+                android:id="@+id/lin_privacy_policy"
                 android:orientation="vertical">
 
                 <LinearLayout
@@ -399,6 +423,8 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="@dimen/_10sdp"
+                android:id="@+id/lin_terms_condition"
+
                 android:orientation="vertical">
 
                 <LinearLayout
@@ -412,7 +438,8 @@
                         android:layout_gravity="center|start"
                         android:layout_weight="1"
                         android:text="Terms &amp; Conditions"
-                        android:textSize="@dimen/_12ssp"  android:fontFamily="@font/sk_modernist_bolds"
+                        android:textSize="@dimen/_12ssp"
+                        android:fontFamily="@font/sk_modernist_bolds"
                         android:textColor="@color/drawer_black_text_color"
 
                         />
@@ -435,11 +462,11 @@
 
             </LinearLayout>
 
-
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="@dimen/_10sdp"
+                android:id="@+id/lin_about_us"
                 android:orientation="vertical">
 
                 <LinearLayout
@@ -484,6 +511,7 @@
                 android:layout_marginTop="@dimen/_10sdp"
                 android:gravity="center"
                 android:text="Logout"
+                android:id="@+id/txt_logout"
                 android:fontFamily="@font/sk_modernist_bolds"
                 android:textColor="@color/secondry_color"
                 android:textSize="@dimen/_12ssp"

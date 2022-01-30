@@ -33,11 +33,13 @@ class LocationServiceActivity : AppCompatActivity() {
                 }
             })
 
-
     }
 
     private fun initViews() {
         rv_ser = findViewById(R.id.rv_ser)
         rv_ser.setLayoutManager(LinearLayoutManager(applicationContext))
+    }
+    fun onBackPressed(view: android.view.View) {
+        super.onBackPressed()
     }
 }

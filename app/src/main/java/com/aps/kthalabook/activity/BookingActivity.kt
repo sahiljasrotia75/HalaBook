@@ -46,4 +46,8 @@ class BookingActivity : AppCompatActivity() {
 
 
     }
+
+    fun onBackPressed(view: android.view.View) {
+        super.onBackPressed()
+    }
 }

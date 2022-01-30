@@ -101,4 +101,7 @@ class DirectionActivity : AppCompatActivity() {
         dialog.findViewById<View>(R.id.btn_no).setOnClickListener { v: View? -> dialog.dismiss() }
         dialog.findViewById<View>(R.id.btn_yes).setOnClickListener { v: View? -> dialog.dismiss() }
     }
+    fun onBackPressed(view: android.view.View) {
+        super.onBackPressed()
+    }
 }

@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".activities.SpecialistActivity"
     android:orientation="vertical"
-    >
+    tools:context=".activities.SpecialistActivity">
 
 
     <LinearLayout
+        android:id="@+id/header_title"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="@color/primary_color"
@@ -21,6 +21,7 @@
         <ImageView
             android:layout_width="@dimen/_30sdp"
             android:layout_height="@dimen/_30sdp"
+            android:onClick="onBackPressed"
             android:padding="@dimen/_5sdp"
             android:src="@drawable/ic_back" />
 
@@ -28,11 +29,11 @@
             android:layout_width="match_parent"
             android:layout_height="@dimen/_30sdp"
             android:layout_marginStart="@dimen/_5sdp"
-            android:padding="@dimen/_5sdp"
             android:fontFamily="@font/sk_modernist_bolds"
+            android:padding="@dimen/_5sdp"
             android:text="Suspendisse Hairdresser"
             android:textColor="@color/white"
-            android:textSize="@dimen/_15ssp"/>
+            android:textSize="@dimen/_15ssp" />
 
 
     </LinearLayout>
@@ -40,10 +41,29 @@
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/rv_specialist"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/btn_done"
+        android:layout_below="@+id/header_title"
+
+        />
+
+    <TextView
+        android:id="@+id/btn_done"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_40sdp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginTop="@dimen/_20sdp"
+        android:layout_marginBottom="@dimen/_10sdp"
+        android:background="@drawable/btn_bg"
+        android:onClick="selectSpecialist"
+        android:text="Done"
+        android:gravity="center"
+        android:layout_marginHorizontal="@dimen/_14sdp"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        android:textSize="@dimen/_13ssp"
 
         />
 
 
-
-</LinearLayout>
+</RelativeLayout>

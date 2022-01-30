@@ -6,9 +6,9 @@
 
     <application
         android:allowBackup="true"
-        android:icon="@drawable/logo"
+        android:icon="@mipmap/halapp_launcher"
         android:label="@string/app_name"
-        android:roundIcon="@drawable/logo"
+        android:roundIcon="@mipmap/halapp_launcher"
         android:supportsRtl="true"
         android:theme="@style/Theme.KTHalabook" >
         <activity
@@ -16,6 +16,9 @@
             android:exported="false" />
         <activity
             android:name=".activity.ConfirmOrderActivity"
+            android:exported="false" />
+        <activity
+            android:name=".activity.PrivacyTermsAboutActivity"
             android:exported="false" />
         <activity
             android:name=".activity.MyCartActivity"
@@ -70,6 +73,7 @@
         </activity>
         <activity
             android:name=".activity.MainActivity"
+            android:windowSoftInputMode="stateHidden|adjustPan"
             android:exported="true" />
        <!-- <meta-data
             android:name="com.google.android.gms.version"

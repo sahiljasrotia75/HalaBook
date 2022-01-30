@@ -13,6 +13,7 @@ import android.widget.EditText
 import androidx.appcompat.app.AppCompatActivity
 import androidx.drawerlayout.widget.DrawerLayout
 import androidx.fragment.app.Fragment
+import androidx.fragment.app.FragmentManager
 import androidx.viewpager2.widget.ViewPager2
 import com.aps.kthalabook.R
 import com.aps.kthalabook.adapter.FragmentAdapter
@@ -24,6 +25,9 @@ import com.google.android.material.bottomnavigation.BottomNavigationView
 import com.google.android.material.navigation.NavigationBarView
 import com.google.android.material.navigation.NavigationView
 import java.util.ArrayList
+
+
+
 
 
 class MainActivity : AppCompatActivity() {
@@ -39,7 +43,7 @@ class MainActivity : AppCompatActivity() {
         initViews()
         setFragmentAdapter()
         manageClickListener()
-         showLocationDialog();
+        showLocationDialog();
     }
 
     private fun setFragmentAdapter() {
@@ -63,7 +67,7 @@ class MainActivity : AppCompatActivity() {
                 R.id.nav_location -> {
                     view_pager!!.currentItem = 1
                     bottomNavigationView!!.menu.findItem(R.id.nav_location).isChecked = true
-                    et_search!!.visibility = View.INVISIBLE
+                    et_search!!.visibility = View.VISIBLE
                 }
                 R.id.nav_booking -> {
                     view_pager!!.currentItem = 2
@@ -82,6 +86,10 @@ class MainActivity : AppCompatActivity() {
 
     }
 
+    fun onBackPressed(view: android.view.View) {
+        super.onBackPressed()
+    }
+
     private fun initViews() {
 
         drawer_layout = findViewById(R.id.drawer_layout)
@@ -92,8 +100,13 @@ class MainActivity : AppCompatActivity() {
 
     private fun manageClickListener() {
         val nav_view = findViewById<View>(R.id.nav_view) as NavigationView
-
         val header = nav_view.getHeaderView(0)
+        header.findViewById<View>(R.id.lin_home).setOnClickListener { v: View? ->
+            view_pager!!.currentItem = 0
+            bottomNavigationView!!.menu.findItem(R.id.nav_dash).isChecked = true
+            et_search!!.visibility = View.VISIBLE
+            drawer_layout?.closeDrawers()
+        }
         header.findViewById<View>(R.id.lin_notification).setOnClickListener { v: View? ->
             startActivity(
                 Intent(
@@ -110,6 +123,24 @@ class MainActivity : AppCompatActivity() {
                 )
             )
         }
+
+        header.findViewById<View>(R.id.lin_select_category).setOnClickListener { v: View? ->
+            startActivity(
+                Intent(
+                    applicationContext,
+                    CategoryListActivity::class.java
+                )
+            )
+        }
+
+        header.findViewById<View>(R.id.lin_near_salon).setOnClickListener { v: View? ->
+            startActivity(
+                Intent(
+                    applicationContext,
+                    LocationServiceActivity::class.java
+                )
+            )
+        }
         header.findViewById<View>(R.id.lin_chnage_pass).setOnClickListener { v: View? ->
             startActivity(
                 Intent(
@@ -118,6 +149,67 @@ class MainActivity : AppCompatActivity() {
                 )
             )
         }
+        header.findViewById<View>(R.id.lin_deals).setOnClickListener { v: View? ->
+            startActivity(
+                Intent(
+                    applicationContext,
+                    ServiceListActivity::class.java
+                )
+            )
+        }
+
+        header.findViewById<View>(R.id.txt_logout).setOnClickListener { v: View? ->
+            startActivity(
+                Intent(
+                    applicationContext,
+                    LoginActivity::class.java
+                )
+            )
+            finish()
+        }
+
+        header.findViewById<View>(R.id.iv_menu).setOnClickListener { v: View? ->
+            drawer_layout?.closeDrawers()
+        }
+
+        header.findViewById<View>(R.id.lin_my_profile).setOnClickListener {
+            startActivity(
+                Intent(
+                    applicationContext,
+                    ProfileActivity::class.java
+                )
+            )
+        }
+
+        header.findViewById<View>(R.id.lin_privacy_policy).setOnClickListener {
+            startActivity(
+                Intent(
+                    applicationContext,
+                    PrivacyTermsAboutActivity::class.java
+                ).putExtra("textHeading","Privacy Policy")
+            )
+        }
+
+        header.findViewById<View>(R.id.lin_terms_condition).setOnClickListener {
+            startActivity(
+                Intent(
+                    applicationContext,
+                    PrivacyTermsAboutActivity::class.java
+                ).putExtra("textHeading","Terms & Conditions")
+            )
+        }
+
+        header.findViewById<View>(R.id.lin_about_us).setOnClickListener {
+            startActivity(
+                Intent(
+                    applicationContext,
+                    PrivacyTermsAboutActivity::class.java
+                ).putExtra("textHeading","About Us")
+            )
+        }
+
+
+
         findViewById<View>(R.id.iv_profile).setOnClickListener { v: View? ->
             startActivity(
                 Intent(
@@ -131,6 +223,7 @@ class MainActivity : AppCompatActivity() {
                 Gravity.LEFT
             )
         }
+
     }
 
     fun showLocationDialog() {

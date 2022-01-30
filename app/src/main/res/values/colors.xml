@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <color name="primary_color">#39899A</color>
-    <color name="secondry_color">#FF991F</color>
+    <color name="secondry_color">#FFAC98</color>
     <color name="secondry_light">#FFD7CE</color>
+    <color name="coral_color">#FF7F50</color>
 
     <color name="teal_200">#FF03DAC5</color>
     <color name="teal_700">#FF018786</color>
@@ -26,5 +27,6 @@
     <color name="text_color_menu">#77838F</color>
     <color name="drawer_black_text_color">#252938</color>
     <color name="view_color">#E5E5E5</color>
+    <color name="stroke_color">#A4A4A4</color>
 
 </resources>

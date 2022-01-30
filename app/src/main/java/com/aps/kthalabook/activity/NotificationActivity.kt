@@ -26,4 +26,7 @@ class NotificationActivity : AppCompatActivity() {
         rv_notification.setLayoutManager(LinearLayoutManager(applicationContext))
         rv_notification.setAdapter(NotificationAapter())
     }
+    fun onBackPressed(view: android.view.View) {
+        super.onBackPressed()
+    }
 }

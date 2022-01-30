@@ -16,6 +16,8 @@ class ServiceAdapter(var type: String, var commonInterface: CommonInterface) :
             layout = R.layout.service_adapter_item
         } else if (type.equals("VERTICAL_MATCH", ignoreCase = true)) {
             layout = R.layout.service_adapter_match
+        }else  if (type.equals("HORIZONTAL_MATCH", ignoreCase = true)) {
+            layout = R.layout.deals_adapter_item
         }
         return Holder(LayoutInflater.from(parent.context).inflate(layout, parent, false))
     }

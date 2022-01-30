@@ -18,5 +18,7 @@ class RegisterActivity : AppCompatActivity() {
  fun loginClicked(view: android.view.View) {
      onBackPressed()
     }
-
+    fun onBackPressed(view: android.view.View) {
+        super.onBackPressed()
+    }
 }

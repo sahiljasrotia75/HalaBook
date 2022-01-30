@@ -12,13 +12,13 @@
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="wrap_content"
         android:orientation="horizontal">
 
 
         <androidx.cardview.widget.CardView
-            android:layout_width="@dimen/_80sdp"
-            android:layout_height="@dimen/_80sdp"
+            android:layout_width="@dimen/_70sdp"
+            android:layout_height="wrap_content"
             android:layout_gravity="center"
             app:cardBackgroundColor="@color/primary_color"
             app:cardCornerRadius="@dimen/_10sdp"
@@ -28,12 +28,12 @@
 
             <ImageView
                 android:id="@+id/txv_lay_1"
-                android:layout_width="@dimen/_50sdp"
-                android:layout_height="@dimen/_50sdp"
+                android:layout_width="@dimen/_60sdp"
+                android:layout_height="@dimen/_60sdp"
                 android:layout_gravity="center"
                 android:gravity="center"
-                android:scaleType="fitXY"
-                android:src="@drawable/cat_cutter"
+                android:scaleType="centerCrop"
+                android:src="@drawable/select_hair"
                 android:textSize="@dimen/_15ssp"
                 android:textStyle="bold"
                 app:tint="@color/white"
@@ -45,7 +45,7 @@
 
         <View
             android:layout_width="@dimen/_1sdp"
-            android:layout_height="@dimen/_70sdp"
+            android:layout_height="@dimen/_60sdp"
             android:layout_gravity="center"
             android:layout_marginStart="@dimen/_5sdp"
             android:layout_marginEnd="@dimen/_5sdp"
@@ -54,7 +54,7 @@
 
         <RelativeLayout
             android:layout_width="0sp"
-            android:layout_height="match_parent"
+            android:layout_height="wrap_content"
             android:layout_weight="3"
             android:background="@color/white"
             android:orientation="vertical"
@@ -84,7 +84,7 @@
                         android:layout_weight="1"
                         android:fontFamily="@font/sk_modernist_bolds"
                         android:text="Commodo Hair Saloon"
-                        android:textColor="@color/black_500"
+                        android:textColor="@color/black"
                         android:textSize="@dimen/_12ssp"
                          />
 
@@ -110,7 +110,7 @@
                     android:fontFamily="@font/sk_modernist_regular"
                     android:text="Vestibulum scelerisque"
                     android:textColor="@color/text_color_menu"
-                    android:textSize="@dimen/_10ssp" />
+                    android:textSize="@dimen/_11ssp" />
 
 
                 <TextView
@@ -134,7 +134,7 @@
                     android:drawablePadding="@dimen/_5sdp"
                     android:gravity="center|start"
                     android:text="1 Aug 21 - 08:00pm"
-                    android:textColor="@color/black_500"
+                    android:textColor="@color/black"
                     android:textSize="@dimen/_10ssp" />
 
             </LinearLayout>

@@ -26,7 +26,7 @@ class ServiceListAdapter(var context_c: Context, var commonInterface: CommonInte
     }
 
     override fun getItemCount(): Int {
-        return 10
+        return 1
     }
 
     class Holder(itemView: View) : RecyclerView.ViewHolder(itemView) {

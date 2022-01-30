@@ -22,7 +22,6 @@
         android:layout_gravity="start"
         app:headerLayout="@layout/drawer_layout"
         android:background="@drawable/top_right_round_drawable"
-        android:layout_marginTop="@dimen/_60sdp"
         />
 
 </androidx.drawerlayout.widget.DrawerLayout>

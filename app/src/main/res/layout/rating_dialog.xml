@@ -97,13 +97,14 @@
         >
 
 
-        <Button
+        <TextView
             android:id="@+id/btn_submit"
             android:layout_width="0sp"
             android:layout_height="@dimen/_30sdp"
             android:layout_weight="1"
             android:background="@drawable/btn_bg"
             android:text="Submit"
+            android:gravity="center"
             android:textAllCaps="false"
 android:fontFamily="@font/sk_modernist_regular"
             android:textColor="@color/white"

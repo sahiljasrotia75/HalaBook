@@ -1,87 +1,126 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.core.widget.NestedScrollView
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:orientation="vertical"
-    android:background="@color/primary_color">
+    android:background="@color/primary_color"
+    android:orientation="vertical">
 
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:orientation="vertical"
-        >
-    <ImageView
-        android:id="@+id/txv_lay_1"
-        android:layout_width="match_parent"
-        android:layout_height="@dimen/_100sdp"
-        android:gravity="center"
-        android:scaleType="centerInside"
-        android:src="@drawable/banner"
-        android:textStyle="bold"
-        android:layout_margin="@dimen/_10sdp"
-
-        />
+        android:orientation="vertical">
 
 
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            app:cardCornerRadius="@dimen/_10sdp"
+            android:layout_height="@dimen/_100sdp"
+            android:layout_margin="@dimen/_10sdp">
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="vertical"
-        android:background="@drawable/top_round_drawable"
-        android:padding="@dimen/_14sdp"
+            <androidx.viewpager.widget.ViewPager
+                android:id="@+id/view_pager_offers"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+                />
+
+        </androidx.cardview.widget.CardView>
+
+        <!--    <ImageView
+                android:id="@+id/txv_lay_1"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_100sdp"
+                android:gravity="center"
+                android:scaleType="centerInside"
+                android:src="@drawable/banner"
+                android:layout_margin="@dimen/_10sdp"
+
+                />-->
 
 
-        >
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/top_round_drawable"
+            android:orientation="vertical"
+            android:padding="@dimen/_14sdp"
+
+
+            >
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="vertical"
                 android:layout_marginTop="@dimen/_5sdp"
-                >
+                android:orientation="vertical">
 
                 <FrameLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:orientation="vertical"
-                    >
+                    android:orientation="vertical">
+
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Select service"
-                        android:fontFamily="@font/sk_modernist_mono"
-                        android:textSize="@dimen/_15ssp"
-                        android:textColor="@color/black"
                         android:layout_gravity="center|start"
-                        />
+                        android:fontFamily="@font/sk_modernist_mono"
+                        android:text="Select service"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/_15ssp" />
 
                     <TextView
                         android:id="@+id/txt_view_cat"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="See All"
-                        android:fontFamily="@font/sk_modernist_regular"
-                        android:textSize="@dimen/_12ssp"
-                        android:textColor="@color/black_light"
                         android:layout_gravity="center|end"
-                        />
+                        android:fontFamily="@font/sk_modernist_regular"
+                        android:text="See All"
+                        android:textColor="@color/black_light"
+                        android:textSize="@dimen/_12ssp" />
 
 
                 </FrameLayout>
+
                 <androidx.recyclerview.widget.RecyclerView
                     android:id="@+id/rv_cat"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    tools:itemCount="100"
-                    app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
-                    tools:listitem="@layout/category_adapter_item"
                     android:orientation="horizontal"
-                    />
+                    app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                    tools:itemCount="100"
+                    tools:listitem="@layout/category_adapter_item" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="0sp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center|start"
+                        android:layout_weight="1"
+                        android:fontFamily="@font/sk_modernist_mono"
+                        android:text="Popular Salons Near You"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/_15ssp" />
+
+                    <TextView
+                        android:id="@+id/txt_popular_see_all"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center|end"
+                        android:fontFamily="@font/sk_modernist_regular"
+                        android:text="See All"
+                        android:textColor="@color/black_light"
+                        android:textSize="@dimen/_12ssp" />
+
+
+                </LinearLayout>
+
 
                 <androidx.recyclerview.widget.RecyclerView
                     android:id="@+id/rv_ser"
@@ -93,15 +132,52 @@
                     tools:itemCount="100"
                     tools:listitem="@layout/service_list_adapter_item" />
 
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="0sp"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center|start"
+                            android:layout_weight="1"
+                            android:fontFamily="@font/sk_modernist_mono"
+                            android:text="Daily Deals"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/_15ssp" />
+
+                        <TextView
+                            android:id="@+id/txt_see_deals"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="end"
+                            android:fontFamily="@font/sk_modernist_regular"
+                            android:gravity="end"
+                            android:text="See All"
+                            android:textColor="@color/black_light"
+                            android:textSize="@dimen/_12ssp" />
+                    </LinearLayout>
+
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/rv_deals"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent" />
+
+                </LinearLayout>
+
             </LinearLayout>
 
 
-
-
+        </LinearLayout>
     </LinearLayout>
-    </LinearLayout>
-
-
 
 
 </androidx.core.widget.NestedScrollView>

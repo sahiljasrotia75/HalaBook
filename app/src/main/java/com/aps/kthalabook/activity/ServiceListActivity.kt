@@ -27,4 +27,7 @@ class ServiceListActivity : AppCompatActivity() {
             })
 
     }
+    fun onBackPressed(view: android.view.View) {
+        super.onBackPressed()
+    }
 }

@@ -10,6 +10,7 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.aps.kthalabook.R
 import com.aps.kthalabook.activity.MyCartActivity
+import com.aps.kthalabook.activity.ServiceDetailActivity
 import com.aps.kthalabook.adapter.ServiceAdapter
 import com.aps.kthalabook.callbacks.CommonInterface
 
@@ -145,7 +146,7 @@ class LocationFragment : Fragment() {
             object : CommonInterface {
                 override fun onItemClicked(type: String, position: Int) {
                     if (type == "btn_book") {
-                        startActivity(Intent(context, MyCartActivity::class.java))
+                        startActivity(Intent(context, ServiceDetailActivity::class.java))
 
                     }
 

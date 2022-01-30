@@ -19,7 +19,6 @@
         android:layout_marginVertical="@dimen/_4sdp"
         android:paddingHorizontal="@dimen/_10sdp"
         android:paddingVertical="@dimen/_4sdp"
-
         nearbySelection="@{item}"
         selectionText="@{tvSelection}"
         android:onClick="@{()->listener.onSelection(item,position)}"
